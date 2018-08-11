@@ -46,8 +46,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biblioteca.cs" />
+    <Compile Include="interfazAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfazAdmin.Designer.cs">
+      <DependentUpon>interfazAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfazAgendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfazAgendar.Designer.cs">
+      <DependentUpon>interfazAgendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfazPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfazPrincipal.Designer.cs">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="interfazPrincipal.resx">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -56,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -69,6 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo inicio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\este1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_icesi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
