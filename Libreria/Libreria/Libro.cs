@@ -8,10 +8,10 @@ namespace Libreria
 {
     public class Libro
     {
-        // Comentario 1
+        
 
         public const string fisico = "Fisico";
-        public const string digital = "Dgitial";
+        public const string digital = "Digitial";
 
         // hola xd lol
         private String titulo;
@@ -19,14 +19,16 @@ namespace Libreria
         private String anho;
         private int edicion;
         private int index;
+        private String tipo;
 
-        public Libro(String pTitulo, String pAutor, String pAño, int pEdicion, int pIndex)
+        public Libro(String pTitulo, String pAutor, String pAño, int pEdicion, int pIndex, String tipo)
         {
             titulo = pTitulo;
             autor = pAutor;
             anho = pAño;
             edicion = pEdicion;
             index = pIndex;
+            this.Tipo = tipo;
         }
 
         public String Titulo
@@ -84,6 +86,9 @@ namespace Libreria
                 index = value;
             }
         }
+
+        public string Tipo { get => tipo; set => tipo = value; }
+
         public String toString()
         {
             return "[ " + titulo + ", " + autor + ", " + anho + ", " + edicion + " ]";
