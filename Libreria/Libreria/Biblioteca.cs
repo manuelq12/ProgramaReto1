@@ -20,24 +20,24 @@ namespace Libreria
         public Libro[] Libros { get => libros; set => libros = value; }
         public int Index { get => index; set => index = value; }
 
-        public void agregarLibro(String titulo, String autor, String anho, int edicion)
+        public void AgregarLibro(String titulo, String autor, String anho, int edicion, String tipo)
         {
             if (index <= this.libros.Length - 1)
             {
-                Libro agregar = new Libro(titulo, autor, anho, edicion, this.index);
+                Libro agregar = new Libro(titulo, autor, anho, edicion, this.index,tipo );
                 this.libros[this.index] = agregar;
                 index++;
             }
 
         }
-        public void eliminarLibro(int index)
+        public void EliminarLibro(int index)
         {
             if (index > -1 && index < libros.Length)
             {
                 libros[index] = null;
             }
         }
-        public int buscarLibro(String titulo)
+        public int BuscarLibro(String titulo)
         {
             int resultado = -1;
             foreach (Libro s in libros)
