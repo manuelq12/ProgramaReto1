@@ -13,6 +13,7 @@ namespace Libreria
         public const string fisico = "Fisico";
         public const string digital = "Dgitial";
 
+        // hola xd lol
         private String titulo;
         private String autor;
         private String anho;
