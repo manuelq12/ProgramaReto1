@@ -10,6 +10,9 @@ namespace Libreria
     {
         // Comentario 1
 
+        public const string fisico = "Fisico";
+        public const string digital = "Dgitial";
+
         private String titulo;
         private String autor;
         private String anho;
