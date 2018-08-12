@@ -1,4 +1,4 @@
-﻿namespace Libreria
+namespace Libreria
 {
     partial class interfazPrincipal
     {
@@ -70,6 +70,7 @@
             // 
             // butCerrarTodo
             // 
+
             this.butCerrarTodo.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCerrarTodo.ForeColor = System.Drawing.Color.Red;
             this.butCerrarTodo.Location = new System.Drawing.Point(713, 12);
@@ -79,6 +80,8 @@
             this.butCerrarTodo.Text = "X";
             this.butCerrarTodo.UseVisualStyleBackColor = true;
             this.butCerrarTodo.Click += new System.EventHandler(this.butCerrarTodo_Click);
+
+
             // 
             // interfazPrincipal
             // 
@@ -105,6 +108,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Administrador;
+
         private System.Windows.Forms.Button butCerrarTodo;
+
     }
 }
