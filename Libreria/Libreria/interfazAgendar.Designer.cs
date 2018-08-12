@@ -41,6 +41,7 @@
             this.txtIndex = new System.Windows.Forms.TextBox();
             this.checkBoxFisico = new System.Windows.Forms.CheckBox();
             this.butAgregar = new System.Windows.Forms.Button();
+            this.butVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -173,6 +174,18 @@
             this.butAgregar.Text = "Agregar";
             this.butAgregar.UseVisualStyleBackColor = true;
             // 
+            // butVolver
+            // 
+            this.butVolver.BackColor = System.Drawing.Color.Transparent;
+            this.butVolver.BackgroundImage = global::Libreria.Properties.Resources.volver2;
+            this.butVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butVolver.Location = new System.Drawing.Point(12, 559);
+            this.butVolver.Name = "butVolver";
+            this.butVolver.Size = new System.Drawing.Size(52, 48);
+            this.butVolver.TabIndex = 13;
+            this.butVolver.UseVisualStyleBackColor = false;
+            this.butVolver.Click += new System.EventHandler(this.butVolver_Click);
+            // 
             // interfazAgendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -180,6 +193,7 @@
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(749, 619);
+            this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.checkBoxFisico);
             this.Controls.Add(this.txtIndex);
@@ -215,5 +229,6 @@
         private System.Windows.Forms.TextBox txtIndex;
         private System.Windows.Forms.CheckBox checkBoxFisico;
         private System.Windows.Forms.Button butAgregar;
+        private System.Windows.Forms.Button butVolver;
     }
 }

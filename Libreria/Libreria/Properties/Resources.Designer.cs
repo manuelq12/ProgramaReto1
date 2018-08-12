@@ -63,6 +63,16 @@ namespace Libreria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap descarga {
+            get {
+                object obj = ResourceManager.GetObject("descarga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap este1 {
             get {
                 object obj = ResourceManager.GetObject("este1", resourceCulture);
@@ -96,6 +106,16 @@ namespace Libreria.Properties {
         internal static System.Drawing.Bitmap logo_icesi {
             get {
                 object obj = ResourceManager.GetObject("logo_icesi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap volver2 {
+            get {
+                object obj = ResourceManager.GetObject("volver2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

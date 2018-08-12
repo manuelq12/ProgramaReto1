@@ -44,6 +44,7 @@
             this.butBuscar = new System.Windows.Forms.Button();
             this.butAgregar = new System.Windows.Forms.Button();
             this.butEliminar = new System.Windows.Forms.Button();
+            this.butVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +54,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(211, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 51);
+            this.label1.Size = new System.Drawing.Size(276, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "Administrador";
             // 
@@ -209,13 +210,28 @@
             this.butEliminar.Text = "Eliminar";
             this.butEliminar.UseVisualStyleBackColor = true;
             // 
+            // butVolver
+            // 
+            this.butVolver.BackColor = System.Drawing.Color.Transparent;
+            this.butVolver.BackgroundImage = global::Libreria.Properties.Resources.volver2;
+            this.butVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.butVolver.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butVolver.ForeColor = System.Drawing.Color.Transparent;
+            this.butVolver.Location = new System.Drawing.Point(12, 637);
+            this.butVolver.Name = "butVolver";
+            this.butVolver.Size = new System.Drawing.Size(55, 49);
+            this.butVolver.TabIndex = 16;
+            this.butVolver.UseVisualStyleBackColor = false;
+            this.butVolver.Click += new System.EventHandler(this.butVolver_Click);
+            // 
             // interfazAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(748, 673);
+            this.ClientSize = new System.Drawing.Size(748, 698);
+            this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butEliminar);
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.butBuscar);
@@ -258,5 +274,6 @@
         private System.Windows.Forms.Button butBuscar;
         private System.Windows.Forms.Button butAgregar;
         private System.Windows.Forms.Button butEliminar;
+        private System.Windows.Forms.Button butVolver;
     }
 }
