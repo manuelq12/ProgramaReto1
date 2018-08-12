@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+          
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtAnho = new System.Windows.Forms.TextBox();
             this.txtEdicion = new System.Windows.Forms.TextBox();
-            this.txtIndex = new System.Windows.Forms.TextBox();
+          
             this.checkBoxFisico = new System.Windows.Forms.CheckBox();
             this.butAgregar = new System.Windows.Forms.Button();
             this.butVolver = new System.Windows.Forms.Button();
@@ -98,17 +98,7 @@
             this.label5.Size = new System.Drawing.Size(107, 35);
             this.label5.TabIndex = 4;
             this.label5.Text = "Edición";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(69, 359);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 35);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Index";
+          
             // 
             // txtTitulo
             // 
@@ -141,14 +131,7 @@
             this.txtEdicion.Name = "txtEdicion";
             this.txtEdicion.Size = new System.Drawing.Size(210, 42);
             this.txtEdicion.TabIndex = 9;
-            // 
-            // txtIndex
-            // 
-            this.txtIndex.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndex.Location = new System.Drawing.Point(217, 359);
-            this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(210, 42);
-            this.txtIndex.TabIndex = 10;
+           
             // 
             // checkBoxFisico
             // 
@@ -196,12 +179,12 @@
             this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.checkBoxFisico);
-            this.Controls.Add(this.txtIndex);
+          
             this.Controls.Add(this.txtEdicion);
             this.Controls.Add(this.txtAnho);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtTitulo);
-            this.Controls.Add(this.label6);
+          
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -226,7 +209,7 @@
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtAnho;
         private System.Windows.Forms.TextBox txtEdicion;
-        private System.Windows.Forms.TextBox txtIndex;
+       
         private System.Windows.Forms.CheckBox checkBoxFisico;
         private System.Windows.Forms.Button butAgregar;
         private System.Windows.Forms.Button butVolver;
