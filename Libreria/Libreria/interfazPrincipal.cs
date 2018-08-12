@@ -93,28 +93,57 @@ namespace Libreria
             }
             }
         }
-        public void EliminarLibros()
+        public void EliminarLibros(string titulo, string tipo)
         {
-            
+            try
+            {
+                if (tipo.Equals("Fisico"))
+                {
+                    mundo.EliminarLibroFisico(titulo);
+                    MessageBox.Show("Libro Fisico Eliminado");
+                }
+                else
+                {
+                    mundo.EliminarLibroDigital(titulo);
+                    MessageBox.Show("Libro Digital Eliminado");
+                }
+            }catch(Exception e){
+                MessageBox.Show(e.Message);
+            }
         }
 
-        public void BuscarLibros(String titulo, String tipo)
+        public Libro BuscarLibros(String titulo, String tipo)
         {
-            if (tipo.Equals("Físico"))
+            
+           if (tipo.Equals("Físico"))
             {
-                   
+                Libro encontrado = mundo.BuscarLibroFisico(titulo);
+
+                if (encontrado == null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la bibliteca");
+                }
+                else
+                {
+                    return encontrado;
+                }
+
             }
             else
             {
+                Libro encontrado = mundo.BuscarLibroOnline(titulo);
 
+                if (encontrado==null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la bliblioteca");
+                }
+                else
+                {
+                    return encontrado;
+                }
             }
-        }
-
-        public void actualizarLibro()
-        {
 
         }
-
 
         private void butListadoLibro_Click(object sender, EventArgs e)
         {

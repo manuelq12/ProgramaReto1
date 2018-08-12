@@ -18,8 +18,9 @@ namespace Libreria
 
         public interfazAdmin(interfazPrincipal principal)
         {
-            InitializeComponent();
             conexionPrincipal = principal;
+            InitializeComponent();
+
         }
 
 
@@ -94,17 +95,14 @@ namespace Libreria
 
         private void butEliminar_Click(object sender, EventArgs e)
         {
-
-            if (comboBoxTipo.Text == "Físico")
+            if (!comboBoxTipo.Text.Equals(""))
             {
-                
+                conexionPrincipal.EliminarLibros(txtTitulo.Text, comboBoxTipo.Text);
 
-
+            }else{
+                MessageBox.Show("Debe escoger el tipo del libro que desea eliminar");
             }
-            else
-            {
-
-            }
+           
 
             limpiar limpiarTxt = new limpiar();
             limpiarTxt.borrarCampos(this);
@@ -137,6 +135,34 @@ namespace Libreria
 
             limpiar limparTxt = new limpiar();
             limparTxt.borrarCampos(this);
+
+
+
+        }
+
+        private void butBuscar_Click(object sender, EventArgs e)
+        {
+
+            String titulo = txtTitulo.Text;
+            String tipo = comboBoxTipo.Text;
+
+            if (titulo=="" || tipo=="")
+            {
+                MessageBox.Show("Por favor ingrese el título y el tipo (Físico o Digital)");
+            }
+            else
+            {
+                Libro libro = conexionPrincipal.BuscarLibros(titulo,tipo);
+
+                String tituloL = libro.Titulo;
+                String autor = libro.Autor;
+                String anho = libro.Anho;
+                int edicion = libro.Edicion;
+
+
+
+
+            }
 
 
 
