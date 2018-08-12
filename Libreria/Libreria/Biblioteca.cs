@@ -87,7 +87,6 @@ namespace Libreria
                 while ((line = sr.ReadLine()) != null)
                 {
                     String[] prueba = line.Split(',');
-                    int num;
                     String nombre;
                     String autor;
                     String anho;
@@ -98,7 +97,7 @@ namespace Libreria
                         string nueva = "";
                         foreach(String a in prueba)
                         {
-                            if(contador !=0 || contador< prueba.Length -2)
+                            if(contador!=0 || contador< prueba.Length -2)
                             {
                                 nueva += a;
                             }
@@ -110,10 +109,9 @@ namespace Libreria
                     {
                         nombre = prueba[1]; 
                     }
-                    num = int.Parse(prueba[0]);
                     autor = prueba[2];
                     anho = prueba[3];
-                    String tipo= (rnd.Next(0, 6) < 4 ? "Fisico" : "Digital");
+                    String tipo= (rnd.Next(0, 6) < 3 ? "Fisico" : "Digital");
 
                     if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, 0, tipo);
                     else AgregarLibroDigital(nombre, autor, anho, 0, tipo);
