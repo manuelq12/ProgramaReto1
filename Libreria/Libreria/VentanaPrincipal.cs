@@ -6,13 +6,13 @@ using System.Windows.Forms;
 namespace Libreria
 {
     static class VentanaPrincipal
-    {    
-          [STAThread]
-            static void Main()
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new interfazPrincipal());
+    {
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new interfazPrincipal());
 
         }
     }
