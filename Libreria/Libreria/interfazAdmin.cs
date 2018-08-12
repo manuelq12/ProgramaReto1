@@ -46,5 +46,20 @@ namespace Libreria
             this.Visible = false;
             
         }
+
+        private void butAgregar_Click(object sender, EventArgs e)
+        {
+
+            limpiar limparTxt = new limpiar();
+            limparTxt.borrarCampos(this);
+
+
+        }
+
+        private void butEliminar_Click(object sender, EventArgs e)
+        {
+            limpiar limpiarTxt = new limpiar();
+            limpiarTxt.borrarCampos(this);
+        }
     }
 }

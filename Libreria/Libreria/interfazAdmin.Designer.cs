@@ -193,12 +193,13 @@
             // butAgregar
             // 
             this.butAgregar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAgregar.Location = new System.Drawing.Point(75, 556);
+            this.butAgregar.Location = new System.Drawing.Point(79, 556);
             this.butAgregar.Name = "butAgregar";
             this.butAgregar.Size = new System.Drawing.Size(138, 49);
             this.butAgregar.TabIndex = 14;
             this.butAgregar.Text = "Agregar";
             this.butAgregar.UseVisualStyleBackColor = true;
+            this.butAgregar.Click += new System.EventHandler(this.butAgregar_Click);
             // 
             // butEliminar
             // 
@@ -209,6 +210,7 @@
             this.butEliminar.TabIndex = 15;
             this.butEliminar.Text = "Eliminar";
             this.butEliminar.UseVisualStyleBackColor = true;
+            this.butEliminar.Click += new System.EventHandler(this.butEliminar_Click);
             // 
             // butVolver
             // 

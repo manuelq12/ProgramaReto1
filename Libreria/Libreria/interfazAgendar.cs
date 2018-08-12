@@ -34,5 +34,31 @@ namespace Libreria
             ventInicio.Show();
             this.Visible = false;
         }
+
+        private void butAgregar_Click(object sender, EventArgs e)
+        {
+            limpiar limpiarBox = new limpiar();
+            limpiarBox.borrarCampos(this);
+
+
+            if (checkBoxFisico.Checked == false)
+            {
+                MessageBox.Show("Solo puedes agendar libros que estan en físico");
+
+             
+            }
+            else
+            {
+             
+              
+
+            }
+        }
+
+        private void checkBoxFisico_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+    
     }
 }

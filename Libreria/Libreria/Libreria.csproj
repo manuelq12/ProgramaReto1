@@ -65,6 +65,7 @@
       <DependentUpon>interfazPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Libro.cs" />
+    <Compile Include="limpiar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="interfazAdmin.resx">
       <DependentUpon>interfazAdmin.cs</DependentUpon>
