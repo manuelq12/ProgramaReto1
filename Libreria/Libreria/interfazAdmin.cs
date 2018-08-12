@@ -12,10 +12,19 @@ namespace Libreria
 {
     public partial class interfazAdmin : Form
     {
-        public interfazAdmin()
+
+        private interfazPrincipal conexionPrincipal;
+
+
+        public interfazAdmin(interfazPrincipal principal)
         {
             InitializeComponent();
+            conexionPrincipal = principal;
         }
+
+
+        
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -50,6 +59,33 @@ namespace Libreria
         private void butAgregar_Click(object sender, EventArgs e)
         {
 
+            String titulo = txtTitulo.Text;
+            String anho = txtAnho.Text;
+            String autor = txtAutor.Text;
+            String tipo = comboBoxTipo.Text;
+            int edicion = int.Parse(txtEdicion.Text);
+
+            if (titulo == "" || anho == "" || autor == "" || tipo == "")
+            {
+                MessageBox.Show("Algún campo se encuentra sin llenar");
+            }
+            else
+            {
+
+                if (tipo == "Físico")
+                {
+                    conexionPrincipal.AgregarLibros(titulo,autor,anho,edicion,"Físico");
+
+                }
+                else
+                {
+                    conexionPrincipal.AgregarLibros(titulo, autor, anho, edicion, "Digital");
+                    
+                }
+
+            }
+
+
             limpiar limparTxt = new limpiar();
             limparTxt.borrarCampos(this);
 
@@ -58,8 +94,52 @@ namespace Libreria
 
         private void butEliminar_Click(object sender, EventArgs e)
         {
+
+            if (comboBoxTipo.Text == "Físico")
+            {
+                
+
+
+            }
+            else
+            {
+
+            }
+
             limpiar limpiarTxt = new limpiar();
             limpiarTxt.borrarCampos(this);
+            
+        }
+
+
+
+
+        private void butActualizar_Click(object sender, EventArgs e)
+        {
+
+            String titulo = txtTitulo.Text;
+            String anho = txtAnho.Text;
+            String autor = txtAutor.Text;
+            String tipo = comboBoxTipo.Text;
+      
+        
+
+                if (titulo == "" || anho == "" || autor == "" || tipo == "" )
+                {
+                    MessageBox.Show("Algún campo se encuentra sin llenar");
+                }
+                else
+                {
+                    MessageBox.Show("Se actualizó el libro correctamente");
+
+                }
+
+
+            limpiar limparTxt = new limpiar();
+            limparTxt.borrarCampos(this);
+
+
+
         }
     }
 }

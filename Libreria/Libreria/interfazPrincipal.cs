@@ -36,7 +36,7 @@ namespace Libreria
         {
 
         
-            Form ventAdmin = new interfazAdmin();
+            Form ventAdmin = new interfazAdmin(this);
             ventAdmin.Show();
             Visible = false; 
         }
@@ -95,10 +95,23 @@ namespace Libreria
             
         }
 
-        public void BuscarLibros()
+        public void BuscarLibros(String titulo, String tipo)
         {
-            
+            if (tipo.Equals("Físico"))
+            {
+                   
+            }
+            else
+            {
+
+            }
         }
+
+        public void actualizarLibro()
+        {
+
+        }
+
 
         private void butListadoLibro_Click(object sender, EventArgs e)
         {

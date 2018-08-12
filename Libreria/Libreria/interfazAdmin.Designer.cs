@@ -236,6 +236,7 @@
             this.butActualizar.TabIndex = 17;
             this.butActualizar.Text = "Actualizar";
             this.butActualizar.UseVisualStyleBackColor = true;
+            this.butActualizar.Click += new System.EventHandler(this.butActualizar_Click);
             // 
             // interfazAdmin
             // 
