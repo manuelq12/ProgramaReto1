@@ -131,8 +131,16 @@ namespace Libreria
                     autor = prueba[2];
                     anho = prueba[3];
                     String tipo= (rnd.Next(0, 6) < 4 ? "Fisico" : "Digital");
-                    Libro nuevo = new Libro(nombre, autor, anho, 0, index, tipo);
+                    this.AgregarLibro(nombre, autor, anho, 0, tipo);
+                    if (tipo.Equals("Fisico") == true) agregarLibroFisico(nombre, autor, anho, 0, tipo);
+                    else agregarLibroDigital(nombre, autor, anho, 0, tipo);
                 }
+                Console.WriteLine("Hola");
+                foreach(Libro a in Libros)
+                {
+                    Console.WriteLine(a.Titulo);
+                }
+                Console.ReadLine();
                 sr.Close();
             }
 
