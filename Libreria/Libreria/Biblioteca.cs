@@ -11,7 +11,7 @@ namespace Libreria
     {
         public const String ruta = "../../Resources/DatosLibros.csv";
 
-        private int index;
+       
 
         public List<Libro> LibrosFisicos { get; set; }
         public List<Libro> LibrosOnline { get; set; }
