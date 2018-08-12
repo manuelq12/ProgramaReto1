@@ -101,8 +101,8 @@ namespace Libreria
         }
 
          public void EliminarLibroFisico (String nombre){
-            foreach(Libro b in LibrosFisico)
-                if(nombre.Equals(b.Titulo))LibrosFisico.Remove(b);
+            foreach(Libro b in LibrosFisicos)
+                if(nombre.Equals(b.Titulo))LibrosFisicos.Remove(b);
             }
         public void cargarLibros()
         {

@@ -1,4 +1,6 @@
-﻿namespace Libreria
+﻿using System;
+
+namespace Libreria
 {
     partial class interfazPrincipal
     {
@@ -78,7 +80,8 @@
             this.burCerrarTodo.TabIndex = 3;
             this.burCerrarTodo.Text = "X";
             this.burCerrarTodo.UseVisualStyleBackColor = true;
-            this.burCerrarTodo.Click += new System.EventHandler(this.burCerrarTodo_Click);
+            interfazPrincipal interfazPrincipal = this;
+            interfazPrincipal.burCerrarTodo.Click += new System.EventHandler(this.burCerrarTodo_Click);
             // 
             // interfazPrincipal
             // 
@@ -105,5 +108,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Administrador;
         private System.Windows.Forms.Button burCerrarTodo;
+        private readonly EventHandler burCerrarTodo_Click;
     }
 }
