@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Libreria
 {
-    
+
     public partial class interfazPrincipal : Form
     {
         private Biblioteca mundo;
         public interfazPrincipal()
         {
-            
+
             InitializeComponent();
             mundo = new Biblioteca(1000);
             mundo.CargarLibros();
@@ -28,17 +28,17 @@ namespace Libreria
             Form ventAgenda = new interfazAgendar(this);
             ventAgenda.Show();
             Visible = false;
-            
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-        
+
             Form ventAdmin = new interfazAdmin(this);
             ventAdmin.Show();
-            Visible = false; 
+            Visible = false;
         }
 
         private void interfazPrincipal_Load(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Libreria
 
         private void interfazPrincipal_Load_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void butCerrarTodo_Click(object sender, EventArgs e)
@@ -71,23 +71,25 @@ namespace Libreria
                         MessageBox.Show("Libro Fisico Agregado");
                     }
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
                 }
-            }else{
+            }
+            else
+            {
                 try
                 {
-                bool agregado = mundo.AgregarLibroDigital(titulo, autor, anho, edicion, tipo);
-                if (agregado)
-                {
-                    MessageBox.Show("Libro Digital Agregado");
+                    bool agregado = mundo.AgregarLibroDigital(titulo, autor, anho, edicion, tipo);
+                    if (agregado)
+                    {
+                        MessageBox.Show("Libro Digital Agregado");
+                    }
                 }
-            }
-                catch(Exception e)
-            {
+                catch (Exception e)
+                {
                     MessageBox.Show(e.Message);
-            }
+                }
             }
         }
         public void EliminarLibros(string titulo, string tipo)
@@ -104,43 +106,39 @@ namespace Libreria
                     mundo.EliminarLibroDigital(titulo);
                     MessageBox.Show("Libro Digital Eliminado");
                 }
-            }catch(Exception e){
+            }
+            catch (Exception e)
+            {
                 MessageBox.Show(e.Message);
             }
         }
 
-        public Libro BuscarLibros(String titulo, String tipo)
+        public Libro BuscarLibros(string titulo, string tipo)
         {
-
-            if (tipo.Equals("Físico"))
+            Libro encontrado = null;
+            try
             {
-                try
-                {
-                    Libro libro = mundo.BuscarLibroFisico(titulo);
-                    return libro;
 
-                }
-                catch (Exception e)
+                if (tipo.Equals("Fisico"))
                 {
-                    MessageBox.Show(e.Message);
+                    encontrado = mundo.BuscarLibroFisico(titulo);
+                }
+                else
+                {
+                    encontrado = mundo.BuscarLibroFisico(titulo);
                 }
             }
-            else
+            catch (Exception e)
             {
-                try
-                {
-                    Libro libro = mundo.BuscarLibroOnline(titulo);
-                    return libro;
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show(e.Message);
-                }
+                MessageBox.Show(e.Message);
             }
-            
-            
-
+            return encontrado;
         }
+
+
+
+
+
 
         private void butListadoLibro_Click(object sender, EventArgs e)
         {
@@ -148,5 +146,6 @@ namespace Libreria
             ventList.Show();
             Visible = false;
         }
+
     }
 }
