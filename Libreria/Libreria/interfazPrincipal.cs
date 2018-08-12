@@ -50,16 +50,7 @@ namespace Libreria
         {
             
         }
-        public void AgregarLibroFisico(String titulo, String autor, String anho, int edicion, String tip){
-            mundo.agregarLibroFisico(titulo, autor, anho, edicion, tip);
-            MessageBox.Show("Se agrego correctamente");
-        }
-        public void AgregarLibroDigital(String titulo, String autor, String anho, int edicion, String tip)
-        {
-            mundo.agregarLibroDigital(titulo, autor, anho, edicion, tip);
-            Console.WriteLine("se agrego");
-            MessageBox.Show("Se agrego correctamente");
-        }
+
         private void butCerrarTodo_Click(object sender, EventArgs e)
         {
 
@@ -68,17 +59,22 @@ namespace Libreria
 
         }
 
-        public void agregarLibros()
+        public void AgregarLibros(string titulo, string autor, string anho, int edicion, string tipo)
+        {
+            if(tipo.Equals("fisico")){
+                bool agregado = mundo.agregarLibroFisico(titulo,  autor,  anho, edicion,  tipo);
+                if(agregado){
+                    MessageBox.Show("Libro Agregado");
+                }
+            }
+        }
+
+        public void EliminarLibros()
         {
 
         }
 
-        public void eliminarLibros()
-        {
-
-        }
-
-        public void buscarLibros()
+        public void BuscarLibros()
         {
 
         }
