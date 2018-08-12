@@ -11,7 +11,6 @@ namespace Libreria
     {
         public const String ruta = "../../Resources/DatosLibros.csv";
 
-        private int index;
 
         public List<Libro> LibrosFisicos { get; set; }
         public List<Libro> LibrosOnline { get; set; }
@@ -20,9 +19,6 @@ namespace Libreria
         {
             LibrosFisicos = new List<Libro>(tamanho);
             LibrosOnline = new List<Libro>(tamanho);
-
-
-            index = 0;
         }
         private List<Libro> Libros(){
           
@@ -39,7 +35,7 @@ namespace Libreria
             foreach (Libro b in LibrosFisicos)
                 if (titulo.Equals(b.Titulo)) throw new Exception("Ya existe dicho libro fisico");
             if (LibrosFisicos.Capacity == LibrosFisicos.Count) throw new Exception("Lista llena");
-            Libro a = new Libro(titulo, autor, anho, edicion, 0, tipo);
+            Libro a = new Libro(titulo, autor, anho, tipo);
             LibrosFisicos.Add(a);
             Libros();
             return retorno;
@@ -50,7 +46,7 @@ namespace Libreria
             foreach (Libro b in LibrosOnline)
                 if (titulo.Equals(b.Titulo)) throw new Exception("Ya existe dicho libro fisico");
             if (LibrosOnline.Capacity == LibrosOnline.Count) throw new Exception("Lista llena");
-            Libro a = new Libro(titulo, autor, anho, edicion, 0, tipo);
+            Libro a = new Libro(titulo, autor, anho, tipo);
             LibrosOnline.Add(a);
             Libros();
             return retorno;

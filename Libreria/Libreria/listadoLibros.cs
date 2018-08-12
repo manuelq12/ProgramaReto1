@@ -12,16 +12,20 @@ namespace Libreria
 {
     public partial class listadoLibros : Form
     {
-        public listadoLibros()
+        private interfazPrincipal principal;
+        public listadoLibros(interfazPrincipal a)
         {
+            principal = a;
             InitializeComponent();
         }
 
        
 
         private void butLibrosFisicos_Click(object sender, EventArgs e)
-        {
-
+        {           
+            tabla.DataSource = null;
+            tabla.DataSource = principal.darLibrosFisicos();
+            tabla.Refresh();
         }
 
         private void listadoLibros_Load(object sender, EventArgs e)
@@ -35,6 +39,23 @@ namespace Libreria
             ventPrincipal.Show();
             ventPrincipal.Visible = true;
             this.Visible = false;
+        }
+
+        private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void butLibros_Click(object sender, EventArgs e)
+        {
+            tabla.DataSource = null;
+            tabla.DataSource = principal.darLibros();
+        }
+
+        private void butLibrosDigital_Click(object sender, EventArgs e)
+        {
+            tabla.DataSource = null;
+            tabla.DataSource = principal.darLibrosOnline();
         }
     }
 }

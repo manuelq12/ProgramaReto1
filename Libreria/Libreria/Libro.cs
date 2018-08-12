@@ -17,17 +17,13 @@ namespace Libreria
         private String titulo;
         private String autor;
         private String anho;
-        private int edicion;
-        private int index;
         private String tipo;
 
-        public Libro(String pTitulo, String pAutor, String pAño, int pEdicion, int pIndex, String tipo)
+        public Libro(String pTitulo, String pAutor, String pAño, String tipo)
         {
             titulo = pTitulo;
             autor = pAutor;
             anho = pAño;
-            edicion = pEdicion;
-            index = pIndex;
             this.Tipo = tipo;
         }
 
@@ -64,34 +60,12 @@ namespace Libreria
                 anho = value;
             }
         }
-        public int Edicion
-        {
-            get
-            {
-                return edicion;
-            }
-            set
-            {
-                edicion = value;
-            }
-        }
-        public int Index
-        {
-            get
-            {
-                return index;
-            }
-            set
-            {
-                index = value;
-            }
-        }
 
         public string Tipo { get => tipo; set => tipo = value; }
 
         public String toString()
         {
-            return "[ " + titulo + ", " + autor + ", " + anho + ", " + edicion + " ]";
+            return "[ " + titulo + ", " + autor + ", " + anho+  " ]";
         }
 
     }

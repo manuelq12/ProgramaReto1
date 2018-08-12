@@ -14,11 +14,14 @@ namespace Libreria
     public partial class interfazPrincipal : Form
     {
         private Biblioteca mundo;
+        private listadoLibros panelListado;
+
         public interfazPrincipal()
         {
             
             InitializeComponent();
             mundo = new Biblioteca(1000);
+            panelListado = new listadoLibros(this);
             mundo.CargarLibros();
         }
 
@@ -115,9 +118,25 @@ namespace Libreria
 
         private void butListadoLibro_Click(object sender, EventArgs e)
         {
-            Form ventList = new listadoLibros();
-            ventList.Show();
+            panelListado.Show();
             Visible = false;
+        }
+        public List<Libro> darLibros()
+        {
+            List<Libro> a = mundo.LibrosFisicos;
+            List<Libro> b = mundo.LibrosOnline;
+            a.AddRange(b);
+            return a;
+        }
+        public List<Libro> darLibrosFisicos()
+        {
+            List<Libro> a = mundo.LibrosFisicos;
+            return a;
+        }
+        public List<Libro> darLibrosOnline()
+        {
+            List<Libro> a = mundo.LibrosOnline;
+            return a;
         }
     }
 }
