@@ -60,6 +60,7 @@ namespace Libreria
             Libro buscar = null;
             foreach (Libro b in LibrosFisicos)
                 if (nombre.Equals(b.Titulo)) buscar = b;
+            if (buscar == null) throw new Exception("No existe el libro fisico");
             return buscar;
         }
         public Libro BuscarLibroOnline(String nombre)
@@ -67,6 +68,7 @@ namespace Libreria
             Libro buscar = null;
             foreach (Libro b in LibrosOnline)
                 if (nombre.Equals(b.Titulo)) buscar = b;
+            if (buscar == null) throw new Exception("No existe el libro online");
             return buscar;
         }
         

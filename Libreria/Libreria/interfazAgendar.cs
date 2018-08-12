@@ -38,7 +38,10 @@ namespace Libreria
         private void butAgregar_Click(object sender, EventArgs e)
         {
             
-
+            if (titulo == "" || anho == "" || autor == "" || tipo == "")
+            {
+                MessageBox.Show("Algún campo se encuentra sin llenar");
+            }
             if (checkBoxFisico.Checked == false)
             {
                 MessageBox.Show("Solo puedes agendar libros que estan en físico");
