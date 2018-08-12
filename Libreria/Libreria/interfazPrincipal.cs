@@ -90,9 +90,23 @@ namespace Libreria
             }
             }
         }
-        public void EliminarLibros()
+        public void EliminarLibros(string titulo, string tipo)
         {
-            
+            try
+            {
+                if (tipo.Equals("Fisico"))
+                {
+                    mundo.EliminarLibroFisico(titulo);
+                    MessageBox.Show("Libro Fisico Eliminado");
+                }
+                else
+                {
+                    mundo.EliminarLibroDigital(titulo);
+                    MessageBox.Show("Libro Digital Eliminado");
+                }
+            }catch(Exception e){
+                MessageBox.Show(e.Message);
+            }
         }
 
         public Libro BuscarLibros(String titulo, String tipo)
