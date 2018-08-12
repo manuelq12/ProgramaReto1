@@ -10,8 +10,6 @@ namespace Libreria
     class Biblioteca
     {
         public const String ruta = "../../Resources/DatosLibros.csv";
-
-
         public List<Libro> LibrosFisicos { get; set; }
         public List<Libro> LibrosOnline { get; set; }
 
@@ -25,10 +23,6 @@ namespace Libreria
             List<Libro> union = LibrosFisicos.Union(LibrosOnline).ToList<Libro>();
             return union;
         }
-       
-        //Desde aqui 
-        //
-
         public bool AgregarLibroFisico(String titulo, String autor, String anho, String tipo)
         {
             bool retorno = true;

@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Libreria
 {
     public class Libro
     {
-        
-
         public const string fisico = "Fisico";
         public const string digital = "Digital";
 
-        // hola xd lol
         private String titulo;
         private String autor;
         private String anho;
@@ -21,53 +17,15 @@ namespace Libreria
 
         public Libro(String pTitulo, String pAutor, String pAño, String tipo)
         {
-            titulo = pTitulo;
-            autor = pAutor;
-            anho = pAño;
+            Titulo = pTitulo;
+            Autor = pAutor;
+            Anho = pAño;
             this.Tipo = tipo;
         }
-
-        public String Titulo
-        {
-            get
-            {
-                return titulo;
-            }
-            set
-            {
-                titulo = value;
-            }
-        }
-        public String Autor
-        {
-            get
-            {
-                return autor;
-            }
-            set
-            {
-                autor = value;
-            }
-        }
-        public String Anho
-        {
-            get
-            {
-                return anho;
-            }
-            set
-            {
-                anho = value;
-            }
-        }
-
+        public string Titulo { get => titulo; set => titulo = value; }
+        public string Autor { get => autor; set => autor = value; }
+        public string Anho { get => anho; set => anho = value; }
         public string Tipo { get => tipo; set => tipo = value; }
-
-        public String toString()
-        {
-            return "[ " + titulo + ", " + autor + ", " + anho+  " ]";
-        }
-
     }
 
 }

@@ -122,7 +122,6 @@ namespace Libreria
             catch( Exception e)
             {
             }
-            Console.ReadLine();
         }
     }
 
