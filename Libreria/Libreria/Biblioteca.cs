@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Libreria
@@ -144,10 +144,12 @@ namespace Libreria
                 sr.Close();
             }
 
-            catch
+            catch( Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
     }
 
