@@ -232,5 +232,9 @@
         private System.Windows.Forms.CheckBox checkBoxFisico;
         private System.Windows.Forms.Button butAgregar;
         private System.Windows.Forms.Button butVolver;
+
+        
+       
+
     }
 }

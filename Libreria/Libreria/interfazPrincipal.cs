@@ -57,5 +57,23 @@ namespace Libreria
             Application.Exit();
 
         }
+
+        public void agregarLibros()
+        {
+
+        }
+
+        public void eliminarLibros()
+        {
+
+        }
+
+        public void buscarLibros()
+        {
+
+        }
+
+
+
     }
 }

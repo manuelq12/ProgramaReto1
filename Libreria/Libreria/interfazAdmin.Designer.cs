@@ -277,5 +277,8 @@
         private System.Windows.Forms.Button butAgregar;
         private System.Windows.Forms.Button butEliminar;
         private System.Windows.Forms.Button butVolver;
+
+
+
     }
 }
