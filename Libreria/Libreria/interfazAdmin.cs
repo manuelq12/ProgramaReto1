@@ -135,12 +135,12 @@ namespace Libreria
                     conexionPrincipal.EliminarLibros(txtTitulo.Text, comboBoxTipo.Text);
                     if (tipo == "Físico")
                     {
-                        conexionPrincipal.AgregarLibros(titulo, autor, anho, 0, "Físico");
+                        conexionPrincipal.AgregarLibros(titulo, autor, anho, "Físico");
 
                     }
                     else
                     {
-                        conexionPrincipal.AgregarLibros(titulo, autor, anho, 0, "Digital");
+                        conexionPrincipal.AgregarLibros(titulo, autor, anho, "Digital");
 
                     }
                     MessageBox.Show("Se actualizó el libro correctamente");
