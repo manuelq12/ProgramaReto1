@@ -158,7 +158,11 @@ namespace Libreria
                 String autor = libro.Autor;
                 String anho = libro.Anho;
                 int edicion = libro.Edicion;
-
+ 
+                txtTitulo.Text = tituloL;
+                txtAutor.Text = autor;
+                txtAnho.Text = anho;
+                txtEdicion.Text = edicion+"";
 
 
 
