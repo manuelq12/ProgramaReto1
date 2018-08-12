@@ -58,7 +58,7 @@ namespace Libreria
 
         //Desde aqui 
 
-        public bool agregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosFisicos)
@@ -68,7 +68,7 @@ namespace Libreria
             LibrosFisicos.Add(a);
             return retorno;
         }
-        public bool agregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosOnline)
@@ -78,19 +78,29 @@ namespace Libreria
             LibrosOnline.Add(a);
             return retorno;
         }
-        public Libro buscarLibroFisico(String nombre)
+        public Libro BuscarLibroFisico(String nombre)
         {
             Libro buscar = null;
             foreach (Libro b in LibrosFisicos)
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
         }
-        public Libro buscarLibroOnline(String nombre)
+        public Libro BuscarLibroOnline(String nombre)
         {
             Libro buscar = null;
             foreach (Libro b in LibrosOnline)
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
+        }
+
+        public void EliminarLibroDigital (String nombre){
+            foreach(Libro b in LibrosOnline)
+                if(nombre.Equals(b.Titulo))LibrosOnline.Remove(b);
+        }
+
+         public void EliminarLibroFisico (String nombre){
+            foreach(Libro b in LibrosFisico)
+                if(nombre.Equals(b.Titulo))LibrosFisico.Remove(b);
         }
     }
 
