@@ -43,46 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Biblioteca.cs" />
-    <Compile Include="interfazAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="interfazAdmin.Designer.cs">
-      <DependentUpon>interfazAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="interfazAgendar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="interfazAgendar.Designer.cs">
-      <DependentUpon>interfazAgendar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="interfazPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="interfazPrincipal.Designer.cs">
-      <DependentUpon>interfazPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Libro.cs" />
-    <Compile Include="limpiar.cs" />
-    <Compile Include="listadoLibros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="listadoLibros.Designer.cs">
-      <DependentUpon>listadoLibros.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="interfazAdmin.resx">
-      <DependentUpon>interfazAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="interfazAgendar.resx">
-      <DependentUpon>interfazAgendar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="interfazPrincipal.resx">
-      <DependentUpon>interfazPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="listadoLibros.resx">
-      <DependentUpon>listadoLibros.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -102,7 +63,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="VentanaPrincipal.cs" />
+    <Compile Include="modelo\Biblioteca.cs" />
+    <Compile Include="modelo\Libro.cs" />
+    <Compile Include="interfaz\interfazAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\interfazAdmin.Designer.cs">
+      <DependentUpon>interfazAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\interfazAdmin.resx">
+      <DependentUpon>interfazAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="interfaz\interfazAgendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\interfazAgendar.Designer.cs">
+      <DependentUpon>interfazAgendar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\interfazAgendar.resx">
+      <DependentUpon>interfazAgendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="interfaz\interfazPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\interfazPrincipal.Designer.cs">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\interfazPrincipal.resx">
+      <DependentUpon>interfazPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="interfaz\limpiar.cs" />
+    <Compile Include="interfaz\listadoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="interfaz\listadoLibros.Designer.cs">
+      <DependentUpon>listadoLibros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="interfaz\listadoLibros.resx">
+      <DependentUpon>listadoLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="interfaz\VentanaPrincipal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -119,6 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_icesi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modelo\" />
+    <Folder Include="interfaz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
