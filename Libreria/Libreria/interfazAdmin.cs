@@ -128,7 +128,24 @@ namespace Libreria
                 }
                 else
                 {
+                Libro libro = conexionPrincipal.BuscarLibros(titulo, tipo);
+                if ( libro== null) MessageBox.Show("No se encuentra el libro solicitado");
+                else
+                {
+                    conexionPrincipal.EliminarLibros(txtTitulo.Text, comboBoxTipo.Text);
+                    if (tipo == "Físico")
+                    {
+                        conexionPrincipal.AgregarLibros(titulo, autor, anho, 0, "Físico");
+
+                    }
+                    else
+                    {
+                        conexionPrincipal.AgregarLibros(titulo, autor, anho, 0, "Digital");
+
+                    }
                     MessageBox.Show("Se actualizó el libro correctamente");
+                }
+
 
                 }
 
