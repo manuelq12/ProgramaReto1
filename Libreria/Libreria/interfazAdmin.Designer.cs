@@ -169,6 +169,7 @@
             this.butBuscar.TabIndex = 13;
             this.butBuscar.Text = "Buscar";
             this.butBuscar.UseVisualStyleBackColor = true;
+            this.butBuscar.Click += new System.EventHandler(this.butBuscar_Click);
             // 
             // butAgregar
             // 

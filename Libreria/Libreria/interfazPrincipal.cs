@@ -95,10 +95,36 @@ namespace Libreria
             
         }
 
-        public void BuscarLibros(String titulo)
+        public Libro BuscarLibros(String titulo, String tipo)
         {
             
+           if (tipo.Equals("Físico"))
+            {
+                Libro encontrado = mundo.BuscarLibroFisico(titulo);
 
+                if (encontrado == null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la bibliteca");
+                }
+                else
+                {
+                    return encontrado;
+                }
+
+            }
+            else
+            {
+                Libro encontrado = mundo.BuscarLibroOnline(titulo);
+
+                if (encontrado==null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la bliblioteca");
+                }
+                else
+                {
+                    return encontrado;
+                }
+            }
 
         }
 

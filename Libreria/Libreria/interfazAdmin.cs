@@ -142,5 +142,33 @@ namespace Libreria
 
 
         }
+
+        private void butBuscar_Click(object sender, EventArgs e)
+        {
+
+            String titulo = txtTitulo.Text;
+            String tipo = comboBoxTipo.Text;
+
+            if (titulo=="" || tipo=="")
+            {
+                MessageBox.Show("Por favor ingrese el título y el tipo (Físico o Digital)");
+            }
+            else
+            {
+                Libro libro = conexionPrincipal.BuscarLibros(titulo,tipo);
+
+                String tituloL = libro.Titulo;
+                String autor = libro.Autor;
+                String anho = libro.Anho;
+                int edicion = libro.Edicion;
+
+
+
+
+            }
+
+
+
+        }
     }
 }
