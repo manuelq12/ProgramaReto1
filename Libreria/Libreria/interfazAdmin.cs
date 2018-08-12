@@ -64,7 +64,7 @@ namespace Libreria
             String anho = txtAnho.Text;
             String autor = txtAutor.Text;
             String tipo = comboBoxTipo.Text;
-            int edicion = int.Parse(txtEdicion.Text);
+            
 
             if (titulo == "" || anho == "" || autor == "" || tipo == "")
             {
@@ -75,12 +75,12 @@ namespace Libreria
 
                 if (tipo == "Físico")
                 {
-                    conexionPrincipal.AgregarLibros(titulo,autor,anho,edicion,"Físico");
+                    conexionPrincipal.AgregarLibros(titulo, autor, anho, "Físico");
 
                 }
                 else
                 {
-                    conexionPrincipal.AgregarLibros(titulo, autor, anho, edicion, "Digital");
+                    conexionPrincipal.AgregarLibros(titulo, autor, anho, "Digital");
                     
                 }
 
