@@ -31,6 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Administrador = new System.Windows.Forms.Button();
+            this.burCerrarTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +68,18 @@
             this.Administrador.UseVisualStyleBackColor = true;
             this.Administrador.Click += new System.EventHandler(this.button2_Click);
             // 
+            // burCerrarTodo
+            // 
+            this.burCerrarTodo.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.burCerrarTodo.ForeColor = System.Drawing.Color.DarkRed;
+            this.burCerrarTodo.Location = new System.Drawing.Point(735, 12);
+            this.burCerrarTodo.Name = "burCerrarTodo";
+            this.burCerrarTodo.Size = new System.Drawing.Size(53, 32);
+            this.burCerrarTodo.TabIndex = 3;
+            this.burCerrarTodo.Text = "X";
+            this.burCerrarTodo.UseVisualStyleBackColor = true;
+            this.burCerrarTodo.Click += new System.EventHandler(this.burCerrarTodo_Click);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -74,9 +87,11 @@
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.burCerrarTodo);
             this.Controls.Add(this.Administrador);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "interfazPrincipal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -89,5 +104,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Administrador;
+        private System.Windows.Forms.Button burCerrarTodo;
     }
 }

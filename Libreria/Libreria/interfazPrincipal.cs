@@ -36,5 +36,12 @@ namespace Libreria
             ventAdmin.Show();
             Visible = false; 
         }
+
+        private void burCerrarTodo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+            
+        }
     }
 }
