@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Libreria
 {
     class Biblioteca
     {
+        public const String ruta = "~/Resources/DatosLibros.csv";
         private Libro[] libros;
         private int index;
 
@@ -91,6 +93,53 @@ namespace Libreria
             foreach (Libro b in LibrosOnline)
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
+        }
+        public void cargarLibros()
+        {
+            String line;
+            try
+            {
+                StreamReader sr = new StreamReader(ruta);
+                line = "";
+                while ((line = sr.ReadLine()) != null)
+                {
+                    String[] prueba = line.Split(',');
+                    int num;
+                    String nombre;
+                    String autor;
+                    String anho;
+                    Random rnd = new Random();
+                    if (prueba.Length > 4)
+                    {
+                        int contador = 0;
+                        string nueva = "";
+                        foreach(String a in prueba)
+                        {
+                            if(contador !=0 || contador< prueba.Length -2)
+                            {
+                                nueva += a;
+                            }
+                            contador++;
+                        }
+                        nombre = nueva;
+                    }
+                    else
+                    {
+                        nombre = prueba[1]; 
+                    }
+                    num = int.Parse(prueba[0]);
+                    autor = prueba[2];
+                    anho = prueba[3];
+                    String tipo= (rnd.Next(0, 6) < 4 ? "Fisico" : "Digital");
+                    Libro nuevo = new Libro(nombre, autor, anho, 0, index, tipo);
+                }
+                sr.Close();
+            }
+
+            catch
+            {
+
+            }
         }
     }
 
