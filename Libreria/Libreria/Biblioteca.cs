@@ -31,6 +31,7 @@ namespace Libreria
         }
        
         //Desde aqui 
+        //
 
         public bool AgregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
         {
@@ -117,7 +118,7 @@ namespace Libreria
                     if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, 0, tipo);
                     else AgregarLibroDigital(nombre, autor, anho, 0, tipo);
                 }
-                Console.WriteLine("Hola");
+
                 foreach(Libro a in Libros())
                 {
                     Console.WriteLine(a.Titulo);
