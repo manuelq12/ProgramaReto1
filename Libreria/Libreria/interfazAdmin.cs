@@ -146,20 +146,21 @@ namespace Libreria
             String titulo = txtTitulo.Text;
             String tipo = comboBoxTipo.Text;
 
-            if (titulo=="" || tipo=="")
+            if (titulo == "" || tipo == "")
             {
                 MessageBox.Show("Por favor ingrese el título y el tipo (Físico o Digital)");
             }
             else
             {
-                Libro libro = conexionPrincipal.BuscarLibros(titulo,tipo);
+                Libro libro = conexionPrincipal.BuscarLibros(titulo, tipo);
 
                 String tituloL = libro.Titulo;
                 String autor = libro.Autor;
                 String anho = libro.Anho;
                 int edicion = libro.Edicion;
 
-
+                txtTitulo.Text = tituloL;
+                
 
 
             }
