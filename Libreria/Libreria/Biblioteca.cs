@@ -41,6 +41,7 @@ namespace Libreria
             if (LibrosFisicos.Capacity == LibrosFisicos.Count) throw new Exception("Lista llena");
             Libro a = new Libro(titulo, autor, anho, edicion, 0, tipo);
             LibrosFisicos.Add(a);
+            Libros();
             return retorno;
         }
         public bool AgregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
@@ -51,6 +52,7 @@ namespace Libreria
             if (LibrosOnline.Capacity == LibrosOnline.Count) throw new Exception("Lista llena");
             Libro a = new Libro(titulo, autor, anho, edicion, 0, tipo);
             LibrosOnline.Add(a);
+            Libros();
             return retorno;
         }
         public Libro BuscarLibroFisico(String nombre)
@@ -71,11 +73,13 @@ namespace Libreria
         public void EliminarLibroDigital (String nombre){
             foreach(Libro b in LibrosOnline)
                 if(nombre.Equals(b.Titulo))LibrosOnline.Remove(b);
+            Libros();
         }
 
          public void EliminarLibroFisico (String nombre){
             foreach(Libro b in LibrosFisicos)
                 if(nombre.Equals(b.Titulo))LibrosFisicos.Remove(b);
+            Libros();
             }
         public void CargarLibros()
         {
