@@ -10,7 +10,7 @@ namespace Libreria
     class Biblioteca
     {
         public const String ruta = "../../Resources/DatosLibros.csv";
-        private Libro[] libros;
+
         private int index;
 
         public List<Libro> LibrosFisicos { get; set; }
@@ -21,46 +21,18 @@ namespace Libreria
             LibrosFisicos = new List<Libro>(tamanho);
             LibrosOnline = new List<Libro>(tamanho);
 
-            this.libros = new Libro[tamanho];
-            Index = 0;
+
+            index = 0;
         }
-
-        public Libro[] Libros { get => libros; set => libros = value; }
-        public int Index { get => index; set => index = value; }
-
-        public void AgregarLibro(String titulo, String autor, String anho, int edicion, String tipo)
-        {
-            if (index <= this.libros.Length - 1)
-            {
-                Libro agregar = new Libro(titulo, autor, anho, edicion, this.index,tipo );
-                this.libros[this.index] = agregar;
-                index++;
-            }
-
+        private List<Libro> Libros(){
+          
+            List<Libro> union = LibrosFisicos.Union(LibrosOnline).ToList<Libro>();
+            return union;
         }
-        public void EliminarLibro(int index)
-        {
-            if (index > -1 && index < libros.Length)
-            {
-                libros[index] = null;
-            }
-        }
-        public int BuscarLibro(String titulo)
-        {
-            int resultado = -1;
-            foreach (Libro s in libros)
-                if (s.Titulo.Equals(titulo))
-                {
-                    resultado = s.Index;
-                }
-
-            return resultado;
-
-        }
-
+       
         //Desde aqui 
 
-        public bool agregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosFisicos)
@@ -70,7 +42,7 @@ namespace Libreria
             LibrosFisicos.Add(a);
             return retorno;
         }
-        public bool agregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosOnline)
@@ -80,14 +52,14 @@ namespace Libreria
             LibrosOnline.Add(a);
             return retorno;
         }
-        public Libro buscarLibroFisico(String nombre)
+        public Libro BuscarLibroFisico(String nombre)
         {
             Libro buscar = null;
             foreach (Libro b in LibrosFisicos)
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
         }
-        public Libro buscarLibroOnline(String nombre)
+        public Libro BuscarLibroOnline(String nombre)
         {
             Libro buscar = null;
             foreach (Libro b in LibrosOnline)
@@ -104,7 +76,7 @@ namespace Libreria
             foreach(Libro b in LibrosFisicos)
                 if(nombre.Equals(b.Titulo))LibrosFisicos.Remove(b);
             }
-        public void cargarLibros()
+        public void CargarLibros()
         {
             String line;
             try
@@ -141,12 +113,12 @@ namespace Libreria
                     autor = prueba[2];
                     anho = prueba[3];
                     String tipo= (rnd.Next(0, 6) < 4 ? "Fisico" : "Digital");
-                    this.AgregarLibro(nombre, autor, anho, 0, tipo);
-                    if (tipo.Equals("Fisico") == true) agregarLibroFisico(nombre, autor, anho, 0, tipo);
-                    else agregarLibroDigital(nombre, autor, anho, 0, tipo);
+
+                    if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, 0, tipo);
+                    else AgregarLibroDigital(nombre, autor, anho, 0, tipo);
                 }
                 Console.WriteLine("Hola");
-                foreach(Libro a in Libros)
+                foreach(Libro a in Libros())
                 {
                     Console.WriteLine(a.Titulo);
                 }
