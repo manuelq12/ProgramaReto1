@@ -160,7 +160,9 @@ namespace Libreria
                 int edicion = libro.Edicion;
 
                 txtTitulo.Text = tituloL;
-                
+                txtAutor.Text = autor;
+                txtAnho.Text = anho;
+                txtEdicion.Text = edicion+"";
 
 
             }
