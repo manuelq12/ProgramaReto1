@@ -125,7 +125,7 @@ namespace Libreria
                 }
                 else
                 {
-                    encontrado = mundo.BuscarLibroFisico(titulo);
+                    encontrado = mundo.BuscarLibroDigital(titulo);
                 }
             }
             catch (Exception e)
