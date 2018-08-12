@@ -17,24 +17,16 @@ namespace Libreria
 
 
 
-        public interfazAgendar()
+        public interfazAgendar(interfazPrincipal principal)
         {
+            conexionInterfazPrincipal = principal;
             InitializeComponent();
 
             
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void butVolver_Click(object sender, EventArgs e)
         {
             Form ventInicio = new interfazPrincipal();
@@ -45,28 +37,25 @@ namespace Libreria
 
         private void butAgregar_Click(object sender, EventArgs e)
         {
-            limpiar limpiarBox = new limpiar();
-            limpiarBox.borrarCampos(this);
-
+            
 
             if (checkBoxFisico.Checked == false)
             {
                 MessageBox.Show("Solo puedes agendar libros que estan en físico");
-
+               
              
             }
             else
             {
              
-              
-
+                conexionInterfazPrincipal.AgregarLibros(txtTitulo.Text, txtAutor.Text, txtAnho.Text, int.Parse(txtEdicion.Text), "fisico"); 
             }
+            limpiar limpiarBox = new limpiar();
+            limpiarBox.borrarCampos(this);
+
         }
 
-        private void checkBoxFisico_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
     
     }
 }

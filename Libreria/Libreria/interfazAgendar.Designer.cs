@@ -161,7 +161,7 @@
             this.checkBoxFisico.TabIndex = 11;
             this.checkBoxFisico.Text = "El libro esta en físico";
             this.checkBoxFisico.UseVisualStyleBackColor = false;
-            this.checkBoxFisico.CheckedChanged += new System.EventHandler(this.checkBoxFisico_CheckedChanged);
+         
             // 
             // butAgregar
             // 
