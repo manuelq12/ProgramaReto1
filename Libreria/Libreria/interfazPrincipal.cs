@@ -122,6 +122,7 @@ namespace Libreria
                 if (encontrado == null)
                 {
                     MessageBox.Show("El libro no se encuentra en la bibliteca");
+                    return null;
                 }
                 else
                 {
@@ -136,6 +137,7 @@ namespace Libreria
                 if (encontrado==null)
                 {
                     MessageBox.Show("El libro no se encuentra en la bliblioteca");
+                    return null;
                 }
                 else
                 {

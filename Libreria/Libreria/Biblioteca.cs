@@ -118,20 +118,12 @@ namespace Libreria
                     if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, 0, tipo);
                     else AgregarLibroDigital(nombre, autor, anho, 0, tipo);
                 }
-
-                foreach(Libro a in Libros())
-                {
-                    Console.WriteLine(a.Titulo);
-                }
-                Console.ReadLine();
                 sr.Close();
             }
 
             catch( Exception e)
             {
-                Console.WriteLine(e.Message);
             }
-            Console.WriteLine("a");
             Console.ReadLine();
         }
     }
