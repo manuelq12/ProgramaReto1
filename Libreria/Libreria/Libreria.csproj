@@ -94,7 +94,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="VentanaPrincipal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
