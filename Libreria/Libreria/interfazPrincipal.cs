@@ -13,9 +13,12 @@ namespace Libreria
     
     public partial class interfazPrincipal : Form
     {
+        private Biblioteca mundo;
         public interfazPrincipal()
         {
             InitializeComponent();
+            mundo = new Biblioteca(1000);
+            mundo.cargarLibros();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,11 +40,9 @@ namespace Libreria
             Visible = false; 
         }
 
-        private void burCerrarTodo_Click(object sender, EventArgs e)
+        private void interfazPrincipal_Load(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
-            
+
         }
     }
 }

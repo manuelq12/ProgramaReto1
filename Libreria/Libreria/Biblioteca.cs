@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Libreria
@@ -106,6 +106,7 @@ namespace Libreria
             }
         public void cargarLibros()
         {
+            Console.WriteLine("a");
             String line;
             try
             {
@@ -141,15 +142,25 @@ namespace Libreria
                     autor = prueba[2];
                     anho = prueba[3];
                     String tipo= (rnd.Next(0, 6) < 4 ? "Fisico" : "Digital");
-                    Libro nuevo = new Libro(nombre, autor, anho, 0, index, tipo);
+                    this.AgregarLibro(nombre, autor, anho, 0, tipo);
+                    if (tipo.Equals("Fisico") == true) agregarLibroFisico(nombre, autor, anho, 0, tipo);
+                    else agregarLibroDigital(nombre, autor, anho, 0, tipo);
                 }
+                Console.WriteLine("Hola");
+                foreach(Libro a in Libros)
+                {
+                    Console.WriteLine(a.Titulo);
+                }
+                Console.ReadLine();
                 sr.Close();
             }
 
-            catch
+            catch( Exception e)
             {
-
+                Console.WriteLine(e.Message);
             }
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
     }
 
