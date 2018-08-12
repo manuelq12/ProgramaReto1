@@ -71,9 +71,9 @@ namespace Libreria
                         MessageBox.Show("Libro Fisico Agregado");
                     }
                 }
-                catch
+                catch(Exception e)
                 {
-                    MessageBox.Show("No se agrego el libro");
+                    MessageBox.Show(e.Message);
                 }
             }else{
                 try
@@ -84,15 +84,15 @@ namespace Libreria
                     MessageBox.Show("Libro Digital Agregado");
                 }
             }
-                catch
+                catch(Exception e)
             {
-                MessageBox.Show("No se agrego el libro");
+                    MessageBox.Show(e.Message);
             }
             }
         }
         public void EliminarLibros()
         {
-
+            
         }
 
         public void BuscarLibros()
