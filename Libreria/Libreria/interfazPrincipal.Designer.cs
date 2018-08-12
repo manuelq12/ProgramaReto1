@@ -31,7 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Administrador = new System.Windows.Forms.Button();
-            this.burCerrarTodo = new System.Windows.Forms.Button();
+            this.butCerrarTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,17 +68,17 @@
             this.Administrador.UseVisualStyleBackColor = true;
             this.Administrador.Click += new System.EventHandler(this.button2_Click);
             // 
-            // burCerrarTodo
+            // butCerrarTodo
             // 
-            this.burCerrarTodo.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.burCerrarTodo.ForeColor = System.Drawing.Color.DarkRed;
-            this.burCerrarTodo.Location = new System.Drawing.Point(735, 12);
-            this.burCerrarTodo.Name = "burCerrarTodo";
-            this.burCerrarTodo.Size = new System.Drawing.Size(53, 32);
-            this.burCerrarTodo.TabIndex = 3;
-            this.burCerrarTodo.Text = "X";
-            this.burCerrarTodo.UseVisualStyleBackColor = true;
-            this.burCerrarTodo.Click += new System.EventHandler(this.burCerrarTodo_Click);
+            this.butCerrarTodo.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butCerrarTodo.ForeColor = System.Drawing.Color.Red;
+            this.butCerrarTodo.Location = new System.Drawing.Point(713, 12);
+            this.butCerrarTodo.Name = "butCerrarTodo";
+            this.butCerrarTodo.Size = new System.Drawing.Size(75, 39);
+            this.butCerrarTodo.TabIndex = 3;
+            this.butCerrarTodo.Text = "X";
+            this.butCerrarTodo.UseVisualStyleBackColor = true;
+            this.butCerrarTodo.Click += new System.EventHandler(this.butCerrarTodo_Click);
             // 
             // interfazPrincipal
             // 
@@ -87,13 +87,14 @@
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.burCerrarTodo);
+            this.Controls.Add(this.butCerrarTodo);
             this.Controls.Add(this.Administrador);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "interfazPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.interfazPrincipal_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -104,6 +105,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Administrador;
-        private System.Windows.Forms.Button burCerrarTodo;
+        private System.Windows.Forms.Button butCerrarTodo;
     }
 }

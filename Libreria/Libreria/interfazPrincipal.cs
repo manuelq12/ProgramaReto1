@@ -44,5 +44,18 @@ namespace Libreria
         {
 
         }
+
+        private void interfazPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butCerrarTodo_Click(object sender, EventArgs e)
+        {
+
+            this.Dispose();
+            Application.Exit();
+
+        }
     }
 }
