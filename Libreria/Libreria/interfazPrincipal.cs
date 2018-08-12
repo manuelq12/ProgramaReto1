@@ -25,7 +25,7 @@ namespace Libreria
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Form ventAgenda = new interfazAgendar();
+            Form ventAgenda = new interfazAgendar(this);
             ventAgenda.Show();
             Visible = false;
             
