@@ -9,7 +9,7 @@ namespace Libreria
 {
     class Biblioteca
     {
-        public const String ruta = "~/Resources/DatosLibros.csv";
+        public const String ruta = "../../Resources/DatosLibros.csv";
         private Libro[] libros;
         private int index;
 
@@ -106,12 +106,11 @@ namespace Libreria
             }
         public void cargarLibros()
         {
-            Console.WriteLine("a");
             String line;
             try
             {
                 StreamReader sr = new StreamReader(ruta);
-                line = "";
+                line = sr.ReadLine();
                 while ((line = sr.ReadLine()) != null)
                 {
                     String[] prueba = line.Split(',');
