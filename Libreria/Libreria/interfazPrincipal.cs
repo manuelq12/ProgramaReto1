@@ -92,12 +92,12 @@ namespace Libreria
         }
         public void EliminarLibros()
         {
-
+            
         }
 
         public void BuscarLibros()
         {
-
+            
         }
 
         private void butListadoLibro_Click(object sender, EventArgs e)
