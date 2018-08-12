@@ -19,7 +19,7 @@ namespace Libreria
             
             InitializeComponent();
             mundo = new Biblioteca(1000);
-            mundo.cargarLibros();
+            mundo.CargarLibros();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace Libreria
             {
                 try
                 {
-                    bool agregado = mundo.agregarLibroFisico(titulo, autor, anho, edicion, tipo);
+                    bool agregado = mundo.AgregarLibroFisico(titulo, autor, anho, edicion, tipo);
                     if (agregado)
                     {
                         MessageBox.Show("Libro Fisico Agregado");
@@ -78,7 +78,7 @@ namespace Libreria
             }else{
                 try
                 {
-                bool agregado = mundo.agregarLibroDigital(titulo, autor, anho, edicion, tipo);
+                bool agregado = mundo.AgregarLibroDigital(titulo, autor, anho, edicion, tipo);
                 if (agregado)
                 {
                     MessageBox.Show("Libro Digital Agregado");
