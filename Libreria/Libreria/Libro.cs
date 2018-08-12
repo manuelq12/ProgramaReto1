@@ -10,8 +10,8 @@ namespace Libreria
     {
         
 
-        public const string FISICO = "Fisico";
-        public const string DIGITAL = "Digitial";
+        public const string fisico = "Fisico";
+        public const string digital = "Digital";
 
         // hola xd lol
         private String titulo;
