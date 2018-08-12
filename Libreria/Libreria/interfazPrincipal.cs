@@ -25,7 +25,7 @@ namespace Libreria
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Form ventAgenda = new interfazAgendar(this);
+            Form ventAgenda = new interfazAgendar();
             ventAgenda.Show();
             Visible = false;
             
@@ -79,7 +79,11 @@ namespace Libreria
 
         }
 
-
-
+        private void butListadoLibro_Click(object sender, EventArgs e)
+        {
+            Form ventList = new listadoLibros();
+            ventList.Show();
+            Visible = false;
+        }
     }
 }

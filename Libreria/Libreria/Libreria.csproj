@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="Libro.cs" />
     <Compile Include="limpiar.cs" />
+    <Compile Include="listadoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="listadoLibros.Designer.cs">
+      <DependentUpon>listadoLibros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="interfazAdmin.resx">
       <DependentUpon>interfazAdmin.cs</DependentUpon>

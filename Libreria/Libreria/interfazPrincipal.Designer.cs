@@ -32,6 +32,8 @@ namespace Libreria
             this.button1 = new System.Windows.Forms.Button();
             this.Administrador = new System.Windows.Forms.Button();
             this.butCerrarTodo = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.butListadoLibro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,7 @@ namespace Libreria
             this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(142, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 57);
+            this.button1.Size = new System.Drawing.Size(203, 57);
             this.button1.TabIndex = 1;
             this.button1.Text = "Agendar Libro";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,7 +64,7 @@ namespace Libreria
             this.Administrador.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Administrador.Location = new System.Drawing.Point(142, 273);
             this.Administrador.Name = "Administrador";
-            this.Administrador.Size = new System.Drawing.Size(184, 59);
+            this.Administrador.Size = new System.Drawing.Size(203, 59);
             this.Administrador.TabIndex = 2;
             this.Administrador.Text = "Administrador";
             this.Administrador.UseVisualStyleBackColor = true;
@@ -70,7 +72,6 @@ namespace Libreria
             // 
             // butCerrarTodo
             // 
-
             this.butCerrarTodo.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCerrarTodo.ForeColor = System.Drawing.Color.Red;
             this.butCerrarTodo.Location = new System.Drawing.Point(713, 12);
@@ -80,8 +81,26 @@ namespace Libreria
             this.butCerrarTodo.Text = "X";
             this.butCerrarTodo.UseVisualStyleBackColor = true;
             this.butCerrarTodo.Click += new System.EventHandler(this.butCerrarTodo_Click);
-
-
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(-19, -19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // butListadoLibro
+            // 
+            this.butListadoLibro.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butListadoLibro.Location = new System.Drawing.Point(142, 358);
+            this.butListadoLibro.Name = "butListadoLibro";
+            this.butListadoLibro.Size = new System.Drawing.Size(203, 59);
+            this.butListadoLibro.TabIndex = 5;
+            this.butListadoLibro.Text = "Listado";
+            this.butListadoLibro.UseVisualStyleBackColor = true;
+            this.butListadoLibro.Click += new System.EventHandler(this.butListadoLibro_Click);
             // 
             // interfazPrincipal
             // 
@@ -89,7 +108,9 @@ namespace Libreria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 511);
+            this.Controls.Add(this.butListadoLibro);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.butCerrarTodo);
             this.Controls.Add(this.Administrador);
             this.Controls.Add(this.button1);
@@ -110,7 +131,7 @@ namespace Libreria
         private System.Windows.Forms.Button Administrador;
 
         private System.Windows.Forms.Button butCerrarTodo;
-
-
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button butListadoLibro;
     }
 }
