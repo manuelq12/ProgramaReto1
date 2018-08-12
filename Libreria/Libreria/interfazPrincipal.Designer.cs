@@ -47,6 +47,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(142, 195);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 57);
@@ -57,6 +58,7 @@
             // 
             // Administrador
             // 
+            this.Administrador.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Administrador.Location = new System.Drawing.Point(142, 273);
             this.Administrador.Name = "Administrador";
             this.Administrador.Size = new System.Drawing.Size(184, 59);
