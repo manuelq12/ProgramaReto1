@@ -18,8 +18,9 @@ namespace Libreria
 
         public interfazAdmin(interfazPrincipal principal)
         {
-            InitializeComponent();
             conexionPrincipal = principal;
+            InitializeComponent();
+
         }
 
 

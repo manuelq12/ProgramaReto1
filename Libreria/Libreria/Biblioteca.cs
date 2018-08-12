@@ -22,7 +22,7 @@ namespace Libreria
             LibrosOnline = new List<Libro>(tamanho);
 
 
-            index = 0;
+
         }
         private List<Libro> Libros(){
           

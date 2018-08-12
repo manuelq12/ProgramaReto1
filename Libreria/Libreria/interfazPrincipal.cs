@@ -95,23 +95,10 @@ namespace Libreria
             
         }
 
-        public void BuscarLibros(String titulo, String tipo)
+        public void BuscarLibros()
         {
-            if (tipo.Equals("Físico"))
-            {
-                   
-            }
-            else
-            {
-
-            }
+            
         }
-
-        public void actualizarLibro()
-        {
-
-        }
-
 
         private void butListadoLibro_Click(object sender, EventArgs e)
         {
