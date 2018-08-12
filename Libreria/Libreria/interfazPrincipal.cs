@@ -23,15 +23,18 @@ namespace Libreria
 
             Form ventAgenda = new interfazAgendar();
             ventAgenda.Show();
+            Visible = false;
+            
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        
             Form ventAdmin = new interfazAdmin();
             ventAdmin.Show();
-
+            Visible = false; 
         }
     }
 }
