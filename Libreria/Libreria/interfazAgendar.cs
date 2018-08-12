@@ -38,7 +38,7 @@ namespace Libreria
         private void butAgregar_Click(object sender, EventArgs e)
         {
             
-            if (titulo == "" || anho == "" || autor == "" || tipo == "")
+            if (txtTitulo.Text == "" || txtAnho.Text == "" || txtAutor.Text == "")
             {
                 MessageBox.Show("Algún campo se encuentra sin llenar");
             }

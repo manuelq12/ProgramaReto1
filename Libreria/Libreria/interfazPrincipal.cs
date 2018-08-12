@@ -97,11 +97,12 @@ namespace Libreria
                 if (tipo.Equals("Fisico"))
                 {
                     mundo.EliminarLibroFisico(titulo);
-
+                    MessageBox.Show("Libro Fisico Eliminado");
                 }
                 else
                 {
                     mundo.EliminarLibroDigital(titulo);
+                    MessageBox.Show("Libro Digital Eliminado");
                 }
             }catch(Exception e){
                 MessageBox.Show(e.Message);

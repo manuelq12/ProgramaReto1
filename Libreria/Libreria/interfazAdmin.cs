@@ -95,17 +95,14 @@ namespace Libreria
 
         private void butEliminar_Click(object sender, EventArgs e)
         {
-
-            if (comboBoxTipo.Text == "Físico")
+            if (!comboBoxTipo.Text.Equals(""))
             {
-                
+                conexionPrincipal.EliminarLibros(txtTitulo.Text, comboBoxTipo.Text);
 
-
+            }else{
+                MessageBox.Show("Debe escoger el tipo del libro que desea eliminar");
             }
-            else
-            {
-
-            }
+           
 
             limpiar limpiarTxt = new limpiar();
             limpiarTxt.borrarCampos(this);

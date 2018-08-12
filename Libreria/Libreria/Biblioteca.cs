@@ -73,14 +73,12 @@ namespace Libreria
         }
         
         public void EliminarLibroDigital (String nombre){
-            foreach(Libro b in LibrosOnline)
-                if(nombre.Equals(b.Titulo))LibrosOnline.Remove(b);
+            BuscarLibroOnline(nombre);
             Libros();
         }
 
          public void EliminarLibroFisico (String nombre){
-            foreach(Libro b in LibrosFisicos)
-                if(nombre.Equals(b.Titulo))LibrosFisicos.Remove(b);
+            BuscarLibroFisico(nombre);
             Libros();
             }
         public void CargarLibros()
