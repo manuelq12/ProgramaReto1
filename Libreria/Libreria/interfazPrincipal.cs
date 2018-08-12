@@ -95,9 +95,11 @@ namespace Libreria
             
         }
 
-        public void BuscarLibros()
+        public void BuscarLibros(String titulo)
         {
             
+
+
         }
 
         private void butListadoLibro_Click(object sender, EventArgs e)

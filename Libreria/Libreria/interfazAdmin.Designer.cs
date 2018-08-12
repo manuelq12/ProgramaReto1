@@ -34,12 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtAnho = new System.Windows.Forms.TextBox();
             this.txtEdicion = new System.Windows.Forms.TextBox();
-            this.txtIndex = new System.Windows.Forms.TextBox();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
             this.butBuscar = new System.Windows.Forms.Button();
             this.butAgregar = new System.Windows.Forms.Button();
@@ -114,23 +112,12 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Edición";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(88, 420);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 35);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Index";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(84, 476);
+            this.label7.Location = new System.Drawing.Point(84, 421);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 35);
             this.label7.TabIndex = 7;
@@ -161,14 +148,6 @@
             this.txtEdicion.Size = new System.Drawing.Size(187, 42);
             this.txtEdicion.TabIndex = 10;
             // 
-            // txtIndex
-            // 
-            this.txtIndex.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndex.Location = new System.Drawing.Point(220, 413);
-            this.txtIndex.Name = "txtIndex";
-            this.txtIndex.Size = new System.Drawing.Size(187, 42);
-            this.txtIndex.TabIndex = 11;
-            // 
             // comboBoxTipo
             // 
             this.comboBoxTipo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,7 +155,7 @@
             this.comboBoxTipo.Items.AddRange(new object[] {
             "Físico",
             "Digital"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(220, 473);
+            this.comboBoxTipo.Location = new System.Drawing.Point(220, 418);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(187, 43);
             this.comboBoxTipo.TabIndex = 12;
@@ -251,12 +230,10 @@
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.butBuscar);
             this.Controls.Add(this.comboBoxTipo);
-            this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.txtEdicion);
             this.Controls.Add(this.txtAnho);
             this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -279,12 +256,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtAnho;
         private System.Windows.Forms.TextBox txtEdicion;
-        private System.Windows.Forms.TextBox txtIndex;
         private System.Windows.Forms.ComboBox comboBoxTipo;
         private System.Windows.Forms.Button butBuscar;
         private System.Windows.Forms.Button butAgregar;
