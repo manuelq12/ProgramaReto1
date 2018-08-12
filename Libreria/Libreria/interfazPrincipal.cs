@@ -61,14 +61,35 @@ namespace Libreria
 
         public void AgregarLibros(string titulo, string autor, string anho, int edicion, string tipo)
         {
-            if(tipo.Equals("fisico")){
-                bool agregado = mundo.agregarLibroFisico(titulo,  autor,  anho, edicion,  tipo);
-                if(agregado){
-                    MessageBox.Show("Libro Agregado");
+            if (tipo.Equals("fisico"))
+            {
+                try
+                {
+                    bool agregado = mundo.agregarLibroFisico(titulo, autor, anho, edicion, tipo);
+                    if (agregado)
+                    {
+                        MessageBox.Show("Libro Fisico Agregado");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("No se agrego el libro");
+                }
+            }else{
+                try
+                {
+                bool agregado = mundo.agregarLibroDigital(titulo, autor, anho, edicion, tipo);
+                if (agregado)
+                {
+                    MessageBox.Show("Libro Digital Agregado");
                 }
             }
+                catch
+            {
+                MessageBox.Show("No se agrego el libro");
+            }
+            }
         }
-
         public void EliminarLibros()
         {
 
