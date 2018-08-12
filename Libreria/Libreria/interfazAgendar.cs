@@ -51,7 +51,7 @@ namespace Libreria
             else
             {
              
-                conexionInterfazPrincipal.AgregarLibros(txtTitulo.Text, txtAutor.Text, txtAnho.Text, int.Parse(txtEdicion.Text), "fisico"); 
+                conexionInterfazPrincipal.AgregarLibros(txtTitulo.Text, txtAutor.Text, txtAnho.Text, "fisico"); 
             }
             limpiar limpiarBox = new limpiar();
             limpiarBox.borrarCampos(this);

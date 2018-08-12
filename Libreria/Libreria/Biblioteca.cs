@@ -29,7 +29,7 @@ namespace Libreria
         //Desde aqui 
         //
 
-        public bool AgregarLibroFisico(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroFisico(String titulo, String autor, String anho, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosFisicos)
@@ -40,7 +40,7 @@ namespace Libreria
             Libros();
             return retorno;
         }
-        public bool AgregarLibroDigital(String titulo, String autor, String anho, int edicion, String tipo)
+        public bool AgregarLibroDigital(String titulo, String autor, String anho, String tipo)
         {
             bool retorno = true;
             foreach (Libro b in LibrosOnline)
@@ -113,8 +113,8 @@ namespace Libreria
                     anho = prueba[3];
                     String tipo= (rnd.Next(0, 6) < 3 ? "Fisico" : "Digital");
 
-                    if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, 0, tipo);
-                    else AgregarLibroDigital(nombre, autor, anho, 0, tipo);
+                    if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, tipo);
+                    else AgregarLibroDigital(nombre, autor, anho, tipo);
                 }
                 sr.Close();
             }
