@@ -96,6 +96,7 @@ namespace Libreria
         }
         public void cargarLibros()
         {
+            Console.WriteLine("a");
             String line;
             try
             {
