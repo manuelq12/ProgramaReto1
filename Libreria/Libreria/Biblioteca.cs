@@ -94,6 +94,16 @@ namespace Libreria
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
         }
+        
+        public void EliminarLibroDigital (String nombre){
+            foreach(Libro b in LibrosOnline)
+                if(nombre.Equals(b.Titulo))LibrosOnline.Remove(b);
+        }
+
+         public void EliminarLibroFisico (String nombre){
+            foreach(Libro b in LibrosFisico)
+                if(nombre.Equals(b.Titulo))LibrosFisico.Remove(b);
+            }
         public void cargarLibros()
         {
             Console.WriteLine("a");
