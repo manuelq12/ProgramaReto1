@@ -45,6 +45,7 @@
             this.butAgregar = new System.Windows.Forms.Button();
             this.butEliminar = new System.Windows.Forms.Button();
             this.butVolver = new System.Windows.Forms.Button();
+            this.butActualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -226,6 +227,16 @@
             this.butVolver.UseVisualStyleBackColor = false;
             this.butVolver.Click += new System.EventHandler(this.butVolver_Click);
             // 
+            // butActualizar
+            // 
+            this.butActualizar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butActualizar.Location = new System.Drawing.Point(463, 219);
+            this.butActualizar.Name = "butActualizar";
+            this.butActualizar.Size = new System.Drawing.Size(150, 41);
+            this.butActualizar.TabIndex = 17;
+            this.butActualizar.Text = "Actualizar";
+            this.butActualizar.UseVisualStyleBackColor = true;
+            // 
             // interfazAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,6 +244,7 @@
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(748, 698);
+            this.Controls.Add(this.butActualizar);
             this.Controls.Add(this.butVolver);
             this.Controls.Add(this.butEliminar);
             this.Controls.Add(this.butAgregar);
@@ -277,8 +289,6 @@
         private System.Windows.Forms.Button butAgregar;
         private System.Windows.Forms.Button butEliminar;
         private System.Windows.Forms.Button butVolver;
-
-
-
+        private System.Windows.Forms.Button butActualizar;
     }
 }
