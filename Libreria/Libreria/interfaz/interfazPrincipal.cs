@@ -55,7 +55,7 @@ namespace Libreria
 
         private void interfazPrincipal_Load_1(object sender, EventArgs e)
         {
-            
+            mundo.CargarLibros();
         }
 
         private void butCerrarTodo_Click(object sender, EventArgs e)
