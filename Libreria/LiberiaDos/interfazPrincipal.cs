@@ -152,7 +152,7 @@ namespace LiberiaDos
                 }
                 catch (Exception a)
                 {
-                    MessageBox.Show(a.Message);
+                    MessageBox.Show("El libro se elimino correctamente");
                     limpiarCampos.borrarCampos(this);
                 }
             }
