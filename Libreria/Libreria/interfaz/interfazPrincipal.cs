@@ -24,6 +24,8 @@ namespace Libreria
             mundo = new Biblioteca(1000);
             ventAgenda = new interfazAgendar(this);
             panelListado = new listadoLibros(this);
+
+            mundo.CargarLibros();
        
 
         }
@@ -163,16 +165,6 @@ namespace Libreria
         {
             List<Libro> a = mundo.LibrosOnline;
             return a;
-        }
-
-        private void labCentro_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -31,11 +31,31 @@ namespace LiberiaDos
 
         private void butActualizar_Click(object sender, EventArgs e)
         {
+            limpiar limpiarCampos = new limpiar();
+            String titulo = txtTitulo.Text;
+            String anho = txtAnho.Text;
+            String autor = txtAutor.Text;
+            String tipo = comboBox1.Text;
+
+            if (titulo == "" || anho == "" || autor == "" || tipo == "")
+            {
+                MessageBox.Show("Algún campo se encuentra sin llenar");
+
+            }
+            else
+            {
+               // Actualizar libro
+            }
+
+
+
 
         }
 
         private void butAgregar_Click(object sender, EventArgs e)
         {
+            limpiar limpiarCampos = new limpiar();
+
             String titulo = txtTitulo.Text;
             String anho = txtAnho.Text;
             String autor = txtAutor.Text;
@@ -56,11 +76,13 @@ namespace LiberiaDos
                         if (agregado)
                         {
                             MessageBox.Show("Libro físico agregado");
+                            limpiarCampos.borrarCampos(this);
                         }
                     }
                     catch (Exception a)
                     {
                         MessageBox.Show(a.Message);
+                        limpiarCampos.borrarCampos(this);
                     }
 
                 }
@@ -73,11 +95,13 @@ namespace LiberiaDos
                         if (agregado)
                         {
                             MessageBox.Show("Libro digital agregado");
+                            limpiarCampos.borrarCampos(this);
                         }
                     }
                     catch (Exception a)
                     {
                         MessageBox.Show(a.Message);
+                        limpiarCampos.borrarCampos(this);
                     }
                 }
 
@@ -92,12 +116,12 @@ namespace LiberiaDos
 
         private void butEliminar_Click(object sender, EventArgs e)
         {
+            limpiar limpiarCampos = new limpiar();
+
             String titulo = txtTitulo.Text;
             String anho = txtAnho.Text;
             String autor = txtAutor.Text;
             String tipo = comboBox1.Text;
-
-
 
 
             if (titulo!="" && tipo!="")
@@ -109,12 +133,13 @@ namespace LiberiaDos
                     {
                         mundo.EliminarLibroFisico(titulo);
                         MessageBox.Show("Libro físico eliminado");
+                        limpiarCampos.borrarCampos(this);
                     }
                     else
                     {
                         mundo.EliminarLibroDigital(titulo);
                         MessageBox.Show("Libro digital eliminado");
-
+                        limpiarCampos.borrarCampos(this);
                     }
 
 
@@ -123,6 +148,7 @@ namespace LiberiaDos
                 catch (Exception a)
                 {
                     MessageBox.Show(a.Message);
+                    limpiarCampos.borrarCampos(this);
                 }
             }
             else
