@@ -17,6 +17,8 @@ namespace Libreria
         private listadoLibros panelListado;
         private Form ventAgenda;
         private Form ventAdmin;
+        internal object darLibrosFisicos;
+
         public interfazPrincipal()
         {
             
@@ -94,7 +96,7 @@ namespace Libreria
         {
             try
             {
-                if (tipo.Equals("Físico"))
+                if (tipo.Equals(Libro.fisico))
                 {
                     mundo.EliminarLibroFisico(titulo);
                     MessageBox.Show("Libro Fisico Eliminado");
@@ -105,7 +107,7 @@ namespace Libreria
                     MessageBox.Show("Libro Digital Eliminado");
                 }
             }catch(Exception e){
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Se ha eliminado correctamente el libro");
             }
         }
 
@@ -144,6 +146,19 @@ namespace Libreria
 
         }
 
+        public Libro BuscarEnTablaFisicos(int index)
+        {
+            List<Libro> buscar = mundo.LibrosFisicos;
+            Libro p = buscar.ElementAtOrDefault(index);
+            return p;
+        }
+        public Libro BuscarEnTablaDigitales(int index)
+        {
+            List<Libro> buscar = mundo.LibrosOnline;
+            Libro p = buscar.ElementAtOrDefault(index);
+            return p;
+        }
+
         private void butListadoLibro_Click(object sender, EventArgs e)
         {
             panelListado.Show();
@@ -156,7 +171,7 @@ namespace Libreria
             a.AddRange(b);
             return a;
         }
-        public List<Libro> darLibrosFisicos()
+        public List<Libro> DarLibrosFisicos()
         {
             List<Libro> a = mundo.LibrosFisicos;
             return a;

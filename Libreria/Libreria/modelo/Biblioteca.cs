@@ -110,9 +110,9 @@ namespace Libreria
                     }
                     autor = prueba[2];
                     anho = prueba[3];
-                    String tipo= (rnd.Next(0, 6) < 3 ? "Fisico" : "Digital");
+                    String tipo= (rnd.Next(0, 6) < 3 ? Libro.fisico: Libro.digital);
 
-                    if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, tipo);
+                    if (tipo.Equals(Libro.fisico) == true) AgregarLibroFisico(nombre, autor, anho, tipo);
                     else AgregarLibroDigital(nombre, autor, anho, tipo);
                 }
                 sr.Close();

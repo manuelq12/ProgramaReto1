@@ -28,31 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.butLibros = new System.Windows.Forms.Button();
             this.butLibrosFisicos = new System.Windows.Forms.Button();
             this.butLibrosDigital = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabla = new System.Windows.Forms.DataGridView();
             this.butAgendar = new System.Windows.Forms.Button();
+            this.butSelectA = new System.Windows.Forms.Button();
+            this.butEliminarFisicos = new System.Windows.Forms.Button();
+            this.butEliminarDigitales = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
-            // 
-            // butLibros
-            // 
-            this.butLibros.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLibros.Location = new System.Drawing.Point(33, 26);
-            this.butLibros.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.butLibros.Name = "butLibros";
-            this.butLibros.Size = new System.Drawing.Size(116, 46);
-            this.butLibros.TabIndex = 0;
-            this.butLibros.Text = "Libros";
-            this.butLibros.UseVisualStyleBackColor = true;
-            this.butLibros.Click += new System.EventHandler(this.butLibros_Click);
             // 
             // butLibrosFisicos
             // 
             this.butLibrosFisicos.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLibrosFisicos.Location = new System.Drawing.Point(175, 26);
+            this.butLibrosFisicos.Location = new System.Drawing.Point(56, 26);
             this.butLibrosFisicos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butLibrosFisicos.Name = "butLibrosFisicos";
             this.butLibrosFisicos.Size = new System.Drawing.Size(178, 46);
@@ -64,7 +54,7 @@
             // butLibrosDigital
             // 
             this.butLibrosDigital.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butLibrosDigital.Location = new System.Drawing.Point(371, 26);
+            this.butLibrosDigital.Location = new System.Drawing.Point(267, 26);
             this.butLibrosDigital.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.butLibrosDigital.Name = "butLibrosDigital";
             this.butLibrosDigital.Size = new System.Drawing.Size(189, 46);
@@ -91,7 +81,7 @@
             // 
             this.tabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla.Location = new System.Drawing.Point(-6, 103);
-            this.tabla.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabla.Margin = new System.Windows.Forms.Padding(1);
             this.tabla.Name = "tabla";
             this.tabla.RowTemplate.Height = 40;
             this.tabla.Size = new System.Drawing.Size(511, 212);
@@ -101,13 +91,46 @@
             // butAgendar
             // 
             this.butAgendar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butAgendar.Location = new System.Drawing.Point(569, 28);
+            this.butAgendar.Location = new System.Drawing.Point(614, 21);
             this.butAgendar.Name = "butAgendar";
-            this.butAgendar.Size = new System.Drawing.Size(155, 46);
+            this.butAgendar.Size = new System.Drawing.Size(182, 57);
             this.butAgendar.TabIndex = 6;
-            this.butAgendar.Text = "Agendar Libro";
+            this.butAgendar.Text = "Pagina Agendar";
             this.butAgendar.UseVisualStyleBackColor = true;
             this.butAgendar.Click += new System.EventHandler(this.butAgendar_Click);
+            // 
+            // butSelectA
+            // 
+            this.butSelectA.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butSelectA.Location = new System.Drawing.Point(614, 84);
+            this.butSelectA.Name = "butSelectA";
+            this.butSelectA.Size = new System.Drawing.Size(184, 58);
+            this.butSelectA.TabIndex = 7;
+            this.butSelectA.Text = "Agendar Seleccionado";
+            this.butSelectA.UseVisualStyleBackColor = true;
+            this.butSelectA.Click += new System.EventHandler(this.butSelectA_Click);
+            // 
+            // butEliminarFisicos
+            // 
+            this.butEliminarFisicos.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butEliminarFisicos.Location = new System.Drawing.Point(24, 319);
+            this.butEliminarFisicos.Name = "butEliminarFisicos";
+            this.butEliminarFisicos.Size = new System.Drawing.Size(166, 50);
+            this.butEliminarFisicos.TabIndex = 8;
+            this.butEliminarFisicos.Text = "Eliminar Físicos";
+            this.butEliminarFisicos.UseVisualStyleBackColor = true;
+            this.butEliminarFisicos.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // butEliminarDigitales
+            // 
+            this.butEliminarDigitales.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butEliminarDigitales.Location = new System.Drawing.Point(196, 319);
+            this.butEliminarDigitales.Name = "butEliminarDigitales";
+            this.butEliminarDigitales.Size = new System.Drawing.Size(181, 50);
+            this.butEliminarDigitales.TabIndex = 9;
+            this.butEliminarDigitales.Text = "Eliminar Digitales";
+            this.butEliminarDigitales.UseVisualStyleBackColor = true;
+            this.butEliminarDigitales.Click += new System.EventHandler(this.butEliminarDigitales_Click);
             // 
             // listadoLibros
             // 
@@ -115,13 +138,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(838, 314);
+            this.ClientSize = new System.Drawing.Size(962, 441);
+            this.Controls.Add(this.butEliminarDigitales);
+            this.Controls.Add(this.butEliminarFisicos);
+            this.Controls.Add(this.butSelectA);
             this.Controls.Add(this.butAgendar);
             this.Controls.Add(this.tabla);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.butLibrosDigital);
             this.Controls.Add(this.butLibrosFisicos);
-            this.Controls.Add(this.butLibros);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "listadoLibros";
             this.Text = "listadoLibros";
@@ -132,12 +157,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button butLibros;
         private System.Windows.Forms.Button butLibrosFisicos;
         private System.Windows.Forms.Button butLibrosDigital;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView tabla;
         private System.Windows.Forms.Button butAgendar;
+        private System.Windows.Forms.Button butSelectA;
+        private System.Windows.Forms.Button butEliminarFisicos;
+        private System.Windows.Forms.Button butEliminarDigitales;
     }
 }

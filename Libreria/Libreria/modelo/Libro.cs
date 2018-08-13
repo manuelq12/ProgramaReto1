@@ -10,7 +10,7 @@ namespace Libreria
     {
         
 
-        public const string fisico = "Fisico";
+        public const string fisico = "Físico";
         public const string digital = "Digital";
 
         // hola xd lol
@@ -63,7 +63,7 @@ namespace Libreria
 
         public string Tipo { get => tipo; set => tipo = value; }
 
-        public String toString()
+        public String ToString2()
         {
             return "[ " + titulo + ", " + autor + ", " + anho+  " ]";
         }
