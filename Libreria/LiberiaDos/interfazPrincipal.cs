@@ -133,12 +133,15 @@ namespace LiberiaDos
 
                     if (tipo == "Físico")
                     {
+                        Console.WriteLine("Paso primer condicional");
                         mundo.EliminarLibroFisico(titulo);
+                        Console.WriteLine("Cagada");
                         MessageBox.Show("Libro físico eliminado");
                         limpiarCampos.borrarCampos(this);
                     }
                     else
                     {
+                        Console.WriteLine("paso segundo");
                         mundo.EliminarLibroDigital(titulo);
                         MessageBox.Show("Libro digital eliminado");
                         limpiarCampos.borrarCampos(this);
@@ -149,7 +152,7 @@ namespace LiberiaDos
                 }
                 catch (Exception a)
                 {
-                    MessageBox.Show("MierDAAAAAAA");
+                    MessageBox.Show(a.Message);
                     limpiarCampos.borrarCampos(this);
                 }
             }
@@ -253,6 +256,57 @@ namespace LiberiaDos
         private void butLibrosGeneral_Click(object sender, EventArgs e)
         {
             tipo = 0;
+        }
+
+        private void butBuscar_Click(object sender, EventArgs e)
+        {
+            String titulo = txtTitulo.Text;
+            String tipo = comboBox1.Text;
+
+            if (tipo == "Físico")
+            {
+                Libro libro = mundo.BuscarLibroFisico(titulo);
+                if (libro==null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la biblioteca");
+                }
+                else
+                {
+                   
+                    String tituloL = libro.Titulo;
+                    String autor = libro.Autor;
+                    String anho = libro.Anho;
+
+                    txtTitulo.Text = tituloL;
+                    txtAutor.Text = autor;
+                    txtAnho.Text = anho;
+
+
+                }
+            }
+            else
+            {
+                Libro libro = mundo.BuscarLibroOnline(titulo);
+                if (libro == null)
+                {
+                    MessageBox.Show("El libro no se encuentra en la biblioteca");
+                }
+                else
+                {
+
+                    String tituloL = libro.Titulo;
+                    String autor = libro.Autor;
+                    String anho = libro.Anho;
+
+                    txtTitulo.Text = tituloL;
+                    txtAutor.Text = autor;
+                    txtAnho.Text = anho;
+
+
+                }
+            }
+
+
         }
     }
 }

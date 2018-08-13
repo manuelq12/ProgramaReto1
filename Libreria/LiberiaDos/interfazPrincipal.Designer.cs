@@ -51,6 +51,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.butAgregar = new System.Windows.Forms.Button();
+            this.butBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,7 +200,7 @@
             // butActualizar
             // 
             this.butActualizar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butActualizar.Location = new System.Drawing.Point(262, 438);
+            this.butActualizar.Location = new System.Drawing.Point(384, 438);
             this.butActualizar.Name = "butActualizar";
             this.butActualizar.Size = new System.Drawing.Size(161, 49);
             this.butActualizar.TabIndex = 14;
@@ -210,7 +211,7 @@
             // butEliminar
             // 
             this.butEliminar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butEliminar.Location = new System.Drawing.Point(468, 438);
+            this.butEliminar.Location = new System.Drawing.Point(551, 438);
             this.butEliminar.Name = "butEliminar";
             this.butEliminar.Size = new System.Drawing.Size(138, 49);
             this.butEliminar.TabIndex = 15;
@@ -223,7 +224,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::LiberiaDos.Properties.Resources.inicio;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(659, 420);
+            this.pictureBox1.Location = new System.Drawing.Point(730, 438);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(156, 199);
             this.pictureBox1.TabIndex = 16;
@@ -290,6 +291,17 @@
             this.butAgregar.UseVisualStyleBackColor = true;
             this.butAgregar.Click += new System.EventHandler(this.butAgregar_Click);
             // 
+            // butBuscar
+            // 
+            this.butBuscar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butBuscar.Location = new System.Drawing.Point(220, 438);
+            this.butBuscar.Name = "butBuscar";
+            this.butBuscar.Size = new System.Drawing.Size(161, 49);
+            this.butBuscar.TabIndex = 23;
+            this.butBuscar.Text = "Buscar";
+            this.butBuscar.UseVisualStyleBackColor = true;
+            this.butBuscar.Click += new System.EventHandler(this.butBuscar_Click);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -297,6 +309,7 @@
             this.BackgroundImage = global::LiberiaDos.Properties.Resources.FONDOO__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(930, 680);
+            this.Controls.Add(this.butBuscar);
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -353,5 +366,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button butAgregar;
+        private System.Windows.Forms.Button butBuscar;
     }
 }
