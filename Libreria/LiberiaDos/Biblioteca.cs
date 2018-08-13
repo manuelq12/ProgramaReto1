@@ -63,6 +63,34 @@ namespace Libreria
                 if (nombre.Equals(b.Titulo)) buscar = b;
             return buscar;
         }
+        public void actualizarLibro(Libro a, int tipo)
+        {
+            int contador = 0;
+            if(tipo == 0)
+            {
+                for( int i=0; i < LibrosFisicos.Count; i++)
+                {
+                    if (a.Titulo.Equals(LibrosFisicos[i])) LibrosFisicos[i] = a;
+                }
+                   
+            }
+            else if (tipo == 1)
+            {
+                foreach (Libro b in LibrosOnline)
+                    if (a.Titulo.Equals(b.Titulo)) LibrosOnline[contador] = a;
+                    contador++;
+            }
+            else
+            {
+                foreach (Libro b in LibrosFisicos)
+                    if (a.Titulo.Equals(b.Titulo)) LibrosFisicos[contador] = a;
+                    contador++;
+                contador = 0;
+                foreach (Libro b in LibrosOnline)
+                    if (a.Titulo.Equals(b.Titulo)) LibrosOnline[contador] = a;
+                    contador++;
+            }
+        }
         
         public void EliminarLibroDigital (String nombre){
             foreach(Libro b in LibrosOnline)

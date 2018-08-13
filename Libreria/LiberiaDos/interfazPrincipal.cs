@@ -22,6 +22,7 @@ namespace LiberiaDos
             InitializeComponent();
             mundo = new Biblioteca(1000);
             mundo.CargarLibros();
+            Console.WriteLine("Enter para iniciar la apliacion");
             indice = 0;
             tipo = 0;
         }
@@ -46,7 +47,56 @@ namespace LiberiaDos
             }
             else
             {
-               // Actualizar libro
+                // Actualizar libro
+                if (this.tipo == 0)
+                {
+                    Libro a = mundo.BuscarLibroFisico(titulo);
+                    if( a == null)
+                    {
+                        MessageBox.Show("No se encuentra el libro para actualizar");
+                    }
+                    else
+                    {
+                        a.Autor = autor;
+                        a.Anho = anho;
+                        a.Tipo = tipo;
+                        mundo.actualizarLibro(a, this.tipo);
+                        MessageBox.Show("Informacion actualizada");
+                    }
+                }
+                else if (this.tipo == 1)
+                {
+                    Libro a = mundo.BuscarLibroOnline(titulo);
+                    if (a == null)
+                    {
+                        MessageBox.Show("No se encuentra el libro para actualizar");
+                    }
+                    else
+                    {
+                        a.Autor = autor;
+                        a.Anho = anho;
+                        a.Tipo = tipo;
+                        mundo.actualizarLibro(a, this.tipo);
+                        MessageBox.Show("Informacion actualizada");
+                    }
+                }
+                else if (this.tipo == 2)
+                {
+                    Libro a = mundo.BuscarLibroOnline(titulo);
+                    if (a == null)
+                    {
+                        a = mundo.BuscarLibroFisico(titulo);
+                        if (a==null)MessageBox.Show("No se encuentra el libro para actualizar");
+                        else
+                        {
+                            a.Autor = autor;
+                            a.Anho = anho;
+                            a.Tipo = tipo;
+                            mundo.actualizarLibro(a, this.tipo);
+                            MessageBox.Show("Informacion actualizada");
+                        }
+                    }
+                }
             }
 
 
@@ -74,6 +124,7 @@ namespace LiberiaDos
                     //Agregar en el listado de libros fisicos
                     try
                     {
+                        this.tipo = 0;
                         bool agregado = mundo.AgregarLibroFisico(titulo, autor, anho, tipo);
                         if (agregado)
                         {
@@ -93,6 +144,7 @@ namespace LiberiaDos
                     //Agregaren el listado de libros digitales
                     try
                     {
+                        this.tipo = 1;
                         bool agregado = mundo.AgregarLibroDigital(titulo, autor, anho, tipo);
                         if (agregado)
                         {
@@ -133,6 +185,7 @@ namespace LiberiaDos
 
                     if (tipo == "Físico")
                     {
+                        this.tipo = 0;
                         Console.WriteLine("Paso primer condicional");
                         mundo.EliminarLibroFisico(titulo);
                         Console.WriteLine("Cagada");
@@ -141,6 +194,7 @@ namespace LiberiaDos
                     }
                     else
                     {
+                        this.tipo = 1;
                         Console.WriteLine("paso segundo");
                         mundo.EliminarLibroDigital(titulo);
                         MessageBox.Show("Libro digital eliminado");
@@ -198,8 +252,10 @@ namespace LiberiaDos
         }
         public void actualizarPorcentaje()
         {
-            textBox1.Text = mundo.porcentajeFisicos+"%";
-            textBox2.Text = 100-mundo.porcentajeFisicos + "%";
+            String uno = mundo.porcentajeFisicos + "";
+            String dos = (100 - mundo.porcentajeFisicos)+"";
+            textBox1.Text =uno.Substring(0,5) + "%";
+            textBox2.Text = dos.Substring(0,5) + "%";
         }
 
         private void butBuscar_Click(object sender, EventArgs e)
