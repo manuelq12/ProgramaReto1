@@ -120,9 +120,9 @@
   <ItemGroup>
     <None Include="Resources\logo_icesi.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="modelo\" />
-    <Folder Include="interfaz\" />
+    <None Include="Resources\Icesi_Ciencia_Tec_Inn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
