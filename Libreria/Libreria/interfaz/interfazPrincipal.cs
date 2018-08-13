@@ -23,7 +23,6 @@ namespace Libreria
             InitializeComponent();
             mundo = new Biblioteca(1000);
             ventAgenda = new interfazAgendar(this);
-            ventAdmin = new interfazAdmin(this);
             panelListado = new listadoLibros(this);
        
 
@@ -39,12 +38,6 @@ namespace Libreria
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            ventAdmin.Show();
-            Visible = false; 
-        }
 
         private void interfazPrincipal_Load(object sender, EventArgs e)
         {
