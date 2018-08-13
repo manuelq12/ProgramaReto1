@@ -12,11 +12,14 @@ namespace Libreria
         public const String ruta = "../../Resources/DatosLibros.csv";
         public List<Libro> LibrosFisicos { get; set; }
         public List<Libro> LibrosOnline { get; set; }
+        public double porcentajeFisicos{ get; set; }
+        public int numLibros { get; set; }
 
-        public Biblioteca(int tamanho)
+    public Biblioteca(int tamanho)
         {
             LibrosFisicos = new List<Libro>(tamanho);
             LibrosOnline = new List<Libro>(tamanho);
+            porcentajeFisicos = 0;
         }
         private List<Libro> Libros(){
           
@@ -118,6 +121,12 @@ namespace Libreria
             }
             Console.ReadLine();
         }
+        public void actualizarPorcentaje()
+        {
+            numLibros = LibrosOnline.Count + LibrosFisicos.Count;
+            porcentajeFisicos = (LibrosFisicos.Count / numLibros) * 100;
+        }
     }
+
 
 }
