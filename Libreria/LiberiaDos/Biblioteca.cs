@@ -20,6 +20,7 @@ namespace Libreria
             LibrosFisicos = new List<Libro>(tamanho);
             LibrosOnline = new List<Libro>(tamanho);
             porcentajeFisicos = 0;
+            numLibros = 0;
         }
         private List<Libro> Libros(){
           
@@ -84,9 +85,9 @@ namespace Libreria
                 while ((line = sr.ReadLine()) != null)
                 {
                     String[] prueba = line.Split(',');
-                    String nombre;
-                    String autor;
-                    String anho;
+                    String nombre="";
+                    String autor = "";
+                    String anho = "";
                     Random rnd = new Random();
                     if (prueba.Length > 4)
                     {
@@ -104,27 +105,31 @@ namespace Libreria
                     }
                     else
                     {
-                        nombre = prueba[1]; 
+                        if( 1 <prueba.Length) nombre = prueba[1];
                     }
-                    autor = prueba[2];
-                    anho = prueba[3];
-                    String tipo= (rnd.Next(0, 6) < 3 ? "Fisico" : "Digital");
 
+                    if( 2<prueba.Length ) autor = prueba[2];
+                    if (3<prueba.Length) anho = prueba[3];
+                    String tipo= (rnd.Next(0, 6) < 3 ? "Fisico" : "Digital");
+                    if (!nombre.Equals(""))
+                    {
                     if (tipo.Equals("Fisico") == true) AgregarLibroFisico(nombre, autor, anho, tipo);
                     else AgregarLibroDigital(nombre, autor, anho, tipo);
+                    }
                 }
                 sr.Close();
             }
 
             catch( Exception e)
             {
+                Console.WriteLine(e.Message);
             }
             Console.ReadLine();
         }
         public void actualizarPorcentaje()
         {
             numLibros = LibrosOnline.Count + LibrosFisicos.Count;
-            porcentajeFisicos = (LibrosFisicos.Count / numLibros) * 100;
+            porcentajeFisicos = ((double)LibrosFisicos.Count / numLibros) * 100;
         }
     }
 
