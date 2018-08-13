@@ -109,6 +109,13 @@ namespace Libreria
             refrescarDigitales();
         }
 
-       
+        private void butActualizar_Click(object sender, EventArgs e)
+        {
+            string nombre = Microsoft.VisualBasic.Interaction.InputBox("Cambiar Nombre (Si no desea hacerlo dejar en blanco dar Aceptar) :");
+            string autor = Microsoft.VisualBasic.Interaction.InputBox("Cambiar Autor(Si no desea hacerlo dejar en blanco dar Aceptar):");
+            string anho = Microsoft.VisualBasic.Interaction.InputBox("Cambiar Anho (Si no desea hacerlo dejar en blanco dar Aceptar):");
+            
+
+        }
     }
 }
