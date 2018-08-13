@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.butAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(317, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 51);
+            this.label1.Size = new System.Drawing.Size(262, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "BIBLIOTECA";
             // 
@@ -198,22 +199,24 @@
             // butActualizar
             // 
             this.butActualizar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butActualizar.Location = new System.Drawing.Point(53, 438);
+            this.butActualizar.Location = new System.Drawing.Point(262, 438);
             this.butActualizar.Name = "butActualizar";
-            this.butActualizar.Size = new System.Drawing.Size(247, 49);
+            this.butActualizar.Size = new System.Drawing.Size(161, 49);
             this.butActualizar.TabIndex = 14;
             this.butActualizar.Text = "Actualizar ";
             this.butActualizar.UseVisualStyleBackColor = true;
+            this.butActualizar.Click += new System.EventHandler(this.butActualizar_Click);
             // 
             // butEliminar
             // 
             this.butEliminar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butEliminar.Location = new System.Drawing.Point(326, 438);
+            this.butEliminar.Location = new System.Drawing.Point(468, 438);
             this.butEliminar.Name = "butEliminar";
-            this.butEliminar.Size = new System.Drawing.Size(247, 49);
+            this.butEliminar.Size = new System.Drawing.Size(138, 49);
             this.butEliminar.TabIndex = 15;
             this.butEliminar.Text = "Eliminar";
             this.butEliminar.UseVisualStyleBackColor = true;
+            this.butEliminar.Click += new System.EventHandler(this.butEliminar_Click);
             // 
             // pictureBox1
             // 
@@ -276,13 +279,25 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Digitales";
             // 
+            // butAgregar
+            // 
+            this.butAgregar.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butAgregar.Location = new System.Drawing.Point(53, 438);
+            this.butAgregar.Name = "butAgregar";
+            this.butAgregar.Size = new System.Drawing.Size(161, 49);
+            this.butAgregar.TabIndex = 22;
+            this.butAgregar.Text = "Agregar";
+            this.butAgregar.UseVisualStyleBackColor = true;
+            this.butAgregar.Click += new System.EventHandler(this.butAgregar_Click);
+            // 
             // interfazPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LiberiaDos.Properties.Resources.FONDOO__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(889, 680);
+            this.ClientSize = new System.Drawing.Size(914, 680);
+            this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -337,5 +352,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button butAgregar;
     }
 }
