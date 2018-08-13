@@ -108,5 +108,7 @@ namespace Libreria
             principal.EliminarLibros(p.Titulo, p.Tipo);
             refrescarDigitales();
         }
+
+       
     }
 }
