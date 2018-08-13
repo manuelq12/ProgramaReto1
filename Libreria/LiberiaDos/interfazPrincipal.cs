@@ -216,7 +216,7 @@ namespace LiberiaDos
             if (tipo == 0) mira = mundo.LibrosFisicos.Count;
             else if (tipo == 1) mira = mundo.LibrosOnline.Count;
             else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
-            if (indice <= mira) indice = mira-1;
+            if (indice < 0) indice = mira-1;
             else
             {
                 Libro a;
