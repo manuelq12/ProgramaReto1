@@ -46,7 +46,7 @@ namespace LiberiaDos
             }
             else
             {
-                // Actualizar libro
+               // Actualizar libro
             }
 
 
