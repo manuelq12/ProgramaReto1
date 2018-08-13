@@ -296,7 +296,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LiberiaDos.Properties.Resources.FONDOO__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(914, 680);
+            this.ClientSize = new System.Drawing.Size(930, 680);
             this.Controls.Add(this.butAgregar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);

@@ -179,7 +179,7 @@ namespace LiberiaDos
                 }
                 catch (Exception a)
                 {
-                    MessageBox.Show(a.Message);
+                    MessageBox.Show("MierDAAAAAAA");
                     limpiarCampos.borrarCampos(this);
                 }
             }
