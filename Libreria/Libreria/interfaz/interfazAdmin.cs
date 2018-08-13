@@ -128,6 +128,7 @@ namespace Libreria
                 }
                 else
                 {
+
                 Libro libro = conexionPrincipal.BuscarLibros(titulo, tipo);
                 if ( libro== null) MessageBox.Show("No se encuentra el libro solicitado");
                 else

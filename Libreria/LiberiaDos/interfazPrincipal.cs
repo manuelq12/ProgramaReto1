@@ -44,7 +44,39 @@ namespace LiberiaDos
             }
             else
             {
-               // Actualizar libro
+                // Actualizar libro
+
+                if (tipo == "Físico")
+                {
+
+                    Libro libro = mundo.BuscarLibroFisico(titulo);
+                    if (libro ==null)
+                    {
+                        MessageBox.Show("No se encuentra el libro solicitado");
+                    }
+                    else
+                    {
+                        mundo.EliminarLibroFisico(titulo);
+                        mundo.AgregarLibroFisico(titulo,autor,anho,tipo);
+                        MessageBox.Show("Se actualizo el libro correctamente");
+                    }
+                }
+                else
+                {
+                    Libro libro = mundo.BuscarLibroOnline(titulo);
+                    if (libro==null)
+                    {
+                        MessageBox.Show("No se encuentra el libro solicitado");
+                    }
+                    else
+                    {
+                        mundo.EliminarLibroDigital(titulo);
+                        mundo.AgregarLibroDigital(titulo, autor, anho, tipo);
+                        MessageBox.Show("Se actualizó el libro correctamente");
+                    }
+                }
+
+
             }
 
 
