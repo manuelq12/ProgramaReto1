@@ -23,9 +23,8 @@ namespace Libreria
             InitializeComponent();
             mundo = new Biblioteca(1000);
             ventAgenda = new interfazAgendar(this);
+            ventAdmin = new interfazAdmin(this);
             panelListado = new listadoLibros(this);
-
-            mundo.CargarLibros();
        
 
         }
@@ -40,6 +39,12 @@ namespace Libreria
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            ventAdmin.Show();
+            Visible = false; 
+        }
 
         private void interfazPrincipal_Load(object sender, EventArgs e)
         {
@@ -165,6 +170,16 @@ namespace Libreria
         {
             List<Libro> a = mundo.LibrosOnline;
             return a;
+        }
+
+        private void labCentro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

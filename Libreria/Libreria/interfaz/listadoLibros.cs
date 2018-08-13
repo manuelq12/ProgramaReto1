@@ -48,25 +48,14 @@ namespace Libreria
 
         private void butLibros_Click(object sender, EventArgs e)
         {
-            
             tabla.DataSource = null;
             tabla.DataSource = principal.darLibros();
-            
-            
         }
 
         private void butLibrosDigital_Click(object sender, EventArgs e)
         {
             tabla.DataSource = null;
             tabla.DataSource = principal.darLibrosOnline();
-        }
-
-        private void butAgendar_Click(object sender, EventArgs e)
-        {
-            Form agendar = new interfazAgendar(principal);
-            agendar.Visible = true;
-            agendar.Show();
-            this.Visible = false;
         }
     }
 }

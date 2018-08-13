@@ -58,13 +58,7 @@ namespace Libreria
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form listado = new listadoLibros(conexionInterfazPrincipal);
-            listado.Visible = true;
-            listado.Show();
-            this.Visible = false;
-
-        }
+       
+    
     }
 }

@@ -15,13 +15,15 @@ namespace LiberiaDos
     {
 
         private Biblioteca mundo;
-
+        private int indice;
+        private int tipo;
         public interfazPrincipal()
         {
-
             InitializeComponent();
             mundo = new Biblioteca(1000);
             mundo.CargarLibros();
+            indice = 0;
+            tipo = 0;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -44,39 +46,7 @@ namespace LiberiaDos
             }
             else
             {
-                // Actualizar libro
-
-                if (tipo == "Físico")
-                {
-
-                    Libro libro = mundo.BuscarLibroFisico(titulo);
-                    if (libro ==null)
-                    {
-                        MessageBox.Show("No se encuentra el libro solicitado");
-                    }
-                    else
-                    {
-                        mundo.EliminarLibroFisico(titulo);
-                        mundo.AgregarLibroFisico(titulo,autor,anho,tipo);
-                        MessageBox.Show("Se actualizo el libro correctamente");
-                    }
-                }
-                else
-                {
-                    Libro libro = mundo.BuscarLibroOnline(titulo);
-                    if (libro==null)
-                    {
-                        MessageBox.Show("No se encuentra el libro solicitado");
-                    }
-                    else
-                    {
-                        mundo.EliminarLibroDigital(titulo);
-                        mundo.AgregarLibroDigital(titulo, autor, anho, tipo);
-                        MessageBox.Show("Se actualizó el libro correctamente");
-                    }
-                }
-
-
+               // Actualizar libro
             }
 
 
@@ -93,18 +63,18 @@ namespace LiberiaDos
             String autor = txtAutor.Text;
             String tipo = comboBox1.Text;
 
-           if (titulo==""||anho==""||autor==""||tipo=="")
+            if (titulo == "" || anho == "" || autor == "" || tipo == "")
             {
                 MessageBox.Show("Algún campo se encuentra sin llenar");
             }
             else
             {
-                if (tipo=="Físico")
+                if (tipo == "Físico")
                 {
                     //Agregar en el listado de libros fisicos
                     try
                     {
-                        bool agregado = mundo.AgregarLibroFisico(titulo,autor,anho,tipo);
+                        bool agregado = mundo.AgregarLibroFisico(titulo, autor, anho, tipo);
                         if (agregado)
                         {
                             MessageBox.Show("Libro físico agregado");
@@ -156,7 +126,7 @@ namespace LiberiaDos
             String tipo = comboBox1.Text;
 
 
-            if (titulo!="" && tipo!="")
+            if (titulo != "" && tipo != "")
             {
                 try
                 {
@@ -188,10 +158,101 @@ namespace LiberiaDos
                 MessageBox.Show("El campo Titulo o Tipo se encuentran sin llenar");
             }
 
-           
 
 
 
+
+        }
+        public void actualizarInfo(String titulo, String autor, String anho, String tipo)
+        {
+            txtTitulo.Text=titulo;
+            txtAnho.Text= anho;
+            txtAutor.Text= autor;
+            comboBox1.Text= tipo;
+
+        }
+
+        private void interfazPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butSiguiente_Click(object sender, EventArgs e)
+        {
+            indice++;
+            int mira = 0;
+            if (tipo == 0) mira = mundo.LibrosFisicos.Count;
+            else if (tipo == 1) mira = mundo.LibrosOnline.Count;
+            else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
+        if (indice >=mira ) indice = 0;
+            else
+            {
+                Libro a;
+                if (tipo == 0)
+                {
+                    a = mundo.LibrosFisicos[indice];
+                }
+                    else if (tipo == 1)
+                {
+                    a = mundo.LibrosOnline[indice];
+                }
+                    else
+                {
+                    List<Libro> fisicos = mundo.LibrosFisicos;
+                    List<Libro> online = mundo.LibrosOnline;
+                    fisicos.AddRange(online);
+                    a = fisicos[indice]; 
+                }
+
+                actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
+            }
+
+        }
+
+        private void butAnterior_Click(object sender, EventArgs e)
+        {
+            indice--;
+            int mira = 0;
+            if (tipo == 0) mira = mundo.LibrosFisicos.Count;
+            else if (tipo == 1) mira = mundo.LibrosOnline.Count;
+            else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
+            if (indice <= mira) indice = mira-1;
+            else
+            {
+                Libro a;
+                if (tipo == 0)
+                {
+                    a = mundo.LibrosFisicos[indice];
+                }
+                else if (tipo == 1)
+                {
+                    a = mundo.LibrosOnline[indice];
+                }
+                else
+                {
+                    List<Libro> fisicos = mundo.LibrosFisicos;
+                    List<Libro> online = mundo.LibrosOnline;
+                    fisicos.AddRange(online);
+                    a = fisicos[indice];
+                }
+
+                actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
+            }
+        }
+
+        private void butLibrosFisico_Click(object sender, EventArgs e)
+        {
+            tipo = 0;
+        }
+
+        private void butLibrosDigital_Click(object sender, EventArgs e)
+        {
+            tipo = 1;
+        }
+
+        private void butLibrosGeneral_Click(object sender, EventArgs e)
+        {
+            tipo = 0;
         }
     }
 }
