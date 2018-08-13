@@ -168,6 +168,8 @@ namespace LiberiaDos
         }
         public void actualizarInfo(String titulo, String autor, String anho, String tipo)
         {
+            mundo.actualizarPorcentaje();
+            actualizarPorcentaje();
             txtTitulo.Text=titulo;
             txtAnho.Text= anho;
             txtAutor.Text= autor;
@@ -182,33 +184,41 @@ namespace LiberiaDos
 
         private void butSiguiente_Click(object sender, EventArgs e)
         {
-            indice++;
-            int mira = 0;
-            if (tipo == 0) mira = mundo.LibrosFisicos.Count;
-            else if (tipo == 1) mira = mundo.LibrosOnline.Count;
-            else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
-        if (indice >=mira ) indice = 0;
-            else
+            try
             {
-                Libro a;
-                if (tipo == 0)
+                indice++;
+                int mira = 0;
+                if (tipo == 0) mira = mundo.LibrosFisicos.Count;
+                else if (tipo == 1) mira = mundo.LibrosOnline.Count;
+                else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
+                if (indice >= mira) indice = 0;
+                else
                 {
-                    a = mundo.LibrosFisicos[indice];
-                }
+                    Libro a;
+                    if (tipo == 0)
+                    {
+                        a = mundo.LibrosFisicos[indice];
+                    }
                     else if (tipo == 1)
-                {
-                    a = mundo.LibrosOnline[indice];
-                }
+                    {
+                        a = mundo.LibrosOnline[indice];
+                    }
                     else
-                {
-                    List<Libro> fisicos = mundo.LibrosFisicos;
-                    List<Libro> online = mundo.LibrosOnline;
-                    fisicos.AddRange(online);
-                    a = fisicos[indice]; 
+                    {
+                        List<Libro> fisicos = mundo.LibrosFisicos;
+                        List<Libro> online = mundo.LibrosOnline;
+                        fisicos.AddRange(online);
+                        a = fisicos[indice];
+                    }
+                    actualizarPorcentaje();
+                    actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
                 }
-
-                actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
             }
+            catch
+            {
+                Console.WriteLine("Hola");
+            }
+           
 
         }
 
@@ -219,7 +229,7 @@ namespace LiberiaDos
             if (tipo == 0) mira = mundo.LibrosFisicos.Count;
             else if (tipo == 1) mira = mundo.LibrosOnline.Count;
             else mira = mundo.LibrosFisicos.Count + mundo.LibrosOnline.Count;
-            if (indice <= mira) indice = mira-1;
+            if (indice < 0) indice = mira-1;
             else
             {
                 Libro a;
@@ -238,7 +248,8 @@ namespace LiberiaDos
                     fisicos.AddRange(online);
                     a = fisicos[indice];
                 }
-
+                mundo.actualizarPorcentaje();
+                actualizarPorcentaje();
                 actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
             }
         }
@@ -255,7 +266,11 @@ namespace LiberiaDos
 
         private void butLibrosGeneral_Click(object sender, EventArgs e)
         {
-            tipo = 0;
+            tipo = 2;
+        }
+        public void actualizarPorcentaje()
+        {
+
         }
 
         private void butBuscar_Click(object sender, EventArgs e)
