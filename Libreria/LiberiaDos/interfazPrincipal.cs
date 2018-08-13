@@ -325,5 +325,15 @@ namespace LiberiaDos
                 actualizarInfo(a.Titulo, a.Autor, a.Anho, a.Tipo);
             }
         }
+
+        private void interfazPrincipal_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butLibrosDigital_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
