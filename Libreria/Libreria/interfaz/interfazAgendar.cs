@@ -58,7 +58,12 @@ namespace Libreria
 
         }
 
-       
-    
+        private void butListado_Click(object sender, EventArgs e)
+        {
+            Form listado = new interfazAgendar(conexionInterfazPrincipal);
+            listado.Visible = true;
+            listado.Show();
+            this.Visible = false;
+        }
     }
 }
