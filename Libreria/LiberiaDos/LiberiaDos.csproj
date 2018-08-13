@@ -95,5 +95,8 @@
   <ItemGroup>
     <None Include="Resources\inicio.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentacion e informes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
