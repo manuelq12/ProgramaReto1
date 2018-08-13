@@ -103,6 +103,7 @@
       <DependentUpon>listadoLibros.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="interfaz\VentanaPrincipal.cs" />
+    <None Include="Resources\Icesi_Ciencia_Tec_Inn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -120,9 +121,9 @@
   <ItemGroup>
     <None Include="Resources\logo_icesi.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Icesi_Ciencia_Tec_Inn.png" />
+    <Folder Include="modelo\" />
+    <Folder Include="interfaz\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
