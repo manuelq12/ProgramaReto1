@@ -15,20 +15,24 @@ namespace Libreria
     {
         private Biblioteca mundo;
         private listadoLibros panelListado;
-
+        private Form ventAgenda;
+        private Form ventAdmin;
         public interfazPrincipal()
         {
             
             InitializeComponent();
             mundo = new Biblioteca(1000);
+            ventAgenda = new interfazAgendar(this);
+            ventAdmin = new interfazAdmin(this);
             panelListado = new listadoLibros(this);
-            mundo.CargarLibros();
+       
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            Form ventAgenda = new interfazAgendar(this);
+
             ventAgenda.Show();
             Visible = false;
             
@@ -38,8 +42,6 @@ namespace Libreria
         private void button2_Click(object sender, EventArgs e)
         {
 
-        
-            Form ventAdmin = new interfazAdmin(this);
             ventAdmin.Show();
             Visible = false; 
         }
