@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Presentacion e informes\Método de la ingeniería Taller 2-Erazo-Gallo-Reto1.pdf" />
+    <None Include="Presentacion e informes\Reto1_Erazo-Gallo %281%29.pptx" />
     <None Include="Resources\DatosLibros.csv" />
   </ItemGroup>
   <ItemGroup>
@@ -95,8 +97,6 @@
   <ItemGroup>
     <None Include="Resources\inicio.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentacion e informes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
