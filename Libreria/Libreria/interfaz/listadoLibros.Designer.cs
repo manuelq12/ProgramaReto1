@@ -36,7 +36,6 @@
             this.butSelectA = new System.Windows.Forms.Button();
             this.butEliminarFisicos = new System.Windows.Forms.Button();
             this.butEliminarDigitales = new System.Windows.Forms.Button();
-            this.butBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tabla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,17 +132,6 @@
             this.butEliminarDigitales.UseVisualStyleBackColor = true;
             this.butEliminarDigitales.Click += new System.EventHandler(this.butEliminarDigitales_Click);
             // 
-            // butBuscar
-            // 
-            this.butBuscar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butBuscar.Location = new System.Drawing.Point(383, 319);
-            this.butBuscar.Name = "butBuscar";
-            this.butBuscar.Size = new System.Drawing.Size(133, 49);
-            this.butBuscar.TabIndex = 10;
-            this.butBuscar.Text = "Buscar";
-            this.butBuscar.UseVisualStyleBackColor = true;
-            this.butBuscar.Click += new System.EventHandler(this.butBuscar_Click);
-            // 
             // listadoLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,7 +139,6 @@
             this.BackgroundImage = global::Libreria.Properties.Resources.FONDO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 441);
-            this.Controls.Add(this.butBuscar);
             this.Controls.Add(this.butEliminarDigitales);
             this.Controls.Add(this.butEliminarFisicos);
             this.Controls.Add(this.butSelectA);
@@ -178,6 +165,5 @@
         private System.Windows.Forms.Button butSelectA;
         private System.Windows.Forms.Button butEliminarFisicos;
         private System.Windows.Forms.Button butEliminarDigitales;
-        private System.Windows.Forms.Button butBuscar;
     }
 }
