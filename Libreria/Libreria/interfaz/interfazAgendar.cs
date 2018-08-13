@@ -51,14 +51,19 @@ namespace Libreria
             else
             {
              
-                conexionInterfazPrincipal.AgregarLibros(txtTitulo.Text, txtAutor.Text, txtAnho.Text, "fisico"); 
+                conexionInterfazPrincipal.AgregarLibros(txtTitulo.Text, txtAutor.Text, txtAnho.Text, Libro.fisico); 
             }
             limpiar limpiarBox = new limpiar();
             limpiarBox.borrarCampos(this);
 
         }
 
-       
-    
+        private void butListado_Click(object sender, EventArgs e)
+        {
+            Form listado = new interfazAgendar(conexionInterfazPrincipal);
+            listado.Visible = true;
+            listado.Show();
+            this.Visible = false;
+        }
     }
 }
