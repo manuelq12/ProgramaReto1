@@ -103,6 +103,16 @@ namespace Libreria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icesi_Ciencia_Tec_Inn {
+            get {
+                object obj = ResourceManager.GetObject("Icesi_Ciencia_Tec_Inn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_icesi {
             get {
                 object obj = ResourceManager.GetObject("logo_icesi", resourceCulture);

@@ -171,5 +171,15 @@ namespace Libreria
             List<Libro> a = mundo.LibrosOnline;
             return a;
         }
+
+        private void labCentro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
