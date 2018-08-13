@@ -26,6 +26,7 @@ namespace Libreria
             ventAdmin = new interfazAdmin(this);
             panelListado = new listadoLibros(this);
        
+
         }
 
         private void button1_Click(object sender, EventArgs e)
