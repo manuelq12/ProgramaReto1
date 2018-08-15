@@ -55,6 +55,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Docs\Método de la ingeniería Taller 2-Llano-Quintero-Reto1.pdf" />
+    <None Include="Docs\Reto1_Quintero_Llano.pptx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
